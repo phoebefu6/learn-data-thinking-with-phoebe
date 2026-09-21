@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- social:start -->
+<meta name="description" content="Session 5 of 6. Most questions worth asking are answered by a count, a rate or a comparison. Reaching past one is the commonest expensive mistake in the job, and tonight one complicated number from your own work gets demoted.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Learn with Phoebe">
+<meta property="og:title" content="When a count is the answer - learn data thinking with phoebe">
+<meta property="og:description" content="Session 5 of 6. Five rungs from a count to a model, and a rule for stopping: climb only until the question is answered.">
+<meta property="og:url" content="https://phoebefu6.github.io/learn-data-thinking-with-phoebe/courses/05-when-a-count-is-the-answer.html">
+<meta property="og:image" content="https://phoebefu6.github.io/learn-data-thinking-with-phoebe/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="When a count is the answer - learn data thinking with phoebe">
+<meta name="twitter:description" content="Session 5 of 6. A count, a denominator, and two questions that tell you to stop climbing.">
+<meta name="twitter:image" content="https://phoebefu6.github.io/learn-data-thinking-with-phoebe/assets/og-cover.png">
+<!-- social:end -->
+<title>Session 5 · When a count is the answer - learn data thinking with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-data-thinking-with-phoebe</a> / Session 5 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn Data Thinking with Phoebe · Session 5 of 6</div>
+    <h1>When a count <span class="accent">is the answer</span></h1>
+    <p class="sub">Last session pushed in one direction: a number you were about to quote turned out to be the opposite of itself once the mix was held still. Tonight pushes the other way. Most questions that arrive at an analyst are answered by a count, or a count with a denominator under it, or two of those side by side, and the commonest expensive mistake in this job is not sloppiness. It is reaching one rung higher than the question needed and then defending the climb. You brought a number that took a model or a complicated method to produce. We are going to find out what would have answered the same question.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Medium</span>
+      <span class="chip audience">Bring the complicated number</span>
+      <span class="chip audience">No maths, no code</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-18 · The ladder of answers</span>
+      <span class="a3" style="flex:5">18-40 · Build-along: demote one number</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where we start</h2>
+    </div>
+    <p class="lede">Session 4 was about checking a number harder: four levels, one headline that held, one that reversed from plus thirteen pence to minus GBP 3.57 once the channel mix was held fixed, and one question with no answer in the rows at all. Tonight is the opposite pressure. Daybreak's promotion is still the running situation and the same three people are still asking, but the question now is how much machinery any of it actually deserved. Most questions worth asking are answered by a count. Reaching past one costs time, credibility and the ability of anybody in the room to check what you said.</p>
+
+    <div class="legend">
+      <span class="pill">🎫 Clear all three quiz questions to stamp your passport</span>
+      <span class="pill">Live = presented in the 45 minutes</span>
+      <span class="pill">Self-study = the full depth, after class</span>
+    </div>
+
+    <div class="callout win">
+      <p><strong>★ What you walk out with tonight.</strong> One complicated number from your own work demoted to the simplest thing that would have answered the question it was asked, with both answers written side by side. Or, if it genuinely could not be demoted, a defensible written reason why, which is the same output and just as useful.</p>
+    </div>
+
+    <div class="callout tip">
+      <p><strong>Where this sits on the shelf.</strong> When you genuinely do need a model, that is <span class="mono">learn-intro-ml-with-phoebe</span>. When you need an interval or a test, that is <span class="mono">learn-statistics-with-phoebe</span>. When you need a designed experiment, that is <span class="mono">learn-experimentation-with-phoebe</span>. All three are real work with real answers behind them. Here the subject is the step before any of them, which is deciding that you do not need one of them yet.</p>
+    </div>
+  </section>
+
+  <section class="section" id="part-1">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers the ladder</span>
+      <h2>The ladder, and how far up it you actually need to go</h2>
+      <span class="tag concept">7 min live</span>
+    </div>
+    <p class="lede">Five rungs, ordered by what they cost rather than by how impressive they sound. Every rung answers a different shape of question, and the rung above never answers the one below better. It answers a different one, more slowly.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 364" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Five rungs of answer from cheapest to most elaborate: a count, a rate, a comparison, a breakdown, and a model or test, each labelled with what it answers and roughly what it costs in time">
+        <style>
+          .d5aH { font: 800 12px Inter, sans-serif; fill: #2A4030; }
+          .d5aT { font: 800 11.5px Inter, sans-serif; fill: #FFFFFF; }
+          .d5aW { font: 400 11px Inter, sans-serif; fill: #EDF3EE; }
+          .d5aN { font: 400 11px Inter, sans-serif; fill: #61705F; }
+          .d5aK { font: 800 10px Inter, sans-serif; fill: #FFFFFF; letter-spacing: .05em; }
+          .d5aB { font: 400 11px Inter, sans-serif; fill: #1F2A22; }
+        </style>
+
+        <text class="d5aH" x="30" y="26">THE LADDER OF ANSWERS</text>
+        <text class="d5aN" x="30" y="44">each rung answers a different shape of question, and each one costs more than the last</text>
+
+        <rect x="30" y="58" width="600" height="50" rx="10" fill="#C3D6C7"/>
+        <text class="d5aH" x="48" y="79">1 · A count</text>
+        <text class="d5aB" x="48" y="98">how many there were. The whole answer, when that is the question.</text>
+        <rect x="648" y="71" width="100" height="24" rx="12" fill="#61705F"/>
+        <text class="d5aK" x="698" y="87" text-anchor="middle">MINUTES</text>
+        <text class="d5aN" x="762" y="87">cheapest</text>
+
+        <rect x="30" y="112" width="600" height="50" rx="10" fill="#5A7D62"/>
+        <text class="d5aT" x="48" y="133">2 · A rate</text>
+        <text class="d5aW" x="48" y="152">how many out of how many, which is what makes counts comparable</text>
+        <rect x="648" y="125" width="100" height="24" rx="12" fill="#3F5D45"/>
+        <text class="d5aK" x="698" y="141" text-anchor="middle">MINUTES</text>
+
+        <rect x="30" y="166" width="600" height="50" rx="10" fill="#3F5D45"/>
+        <text class="d5aT" x="48" y="187">3 · A comparison</text>
+        <text class="d5aW" x="48" y="206">this group against that one, or before against after</text>
+        <rect x="648" y="179" width="100" height="24" rx="12" fill="#2A4030"/>
+        <text class="d5aK" x="698" y="195" text-anchor="middle">AN HOUR</text>
+
+        <rect x="30" y="220" width="600" height="50" rx="10" fill="#2A4030"/>
+        <text class="d5aT" x="48" y="241">4 · A breakdown</text>
+        <text class="d5aW" x="48" y="260">the same comparison inside groups, which is session 4's levels 2 and 3</text>
+        <rect x="648" y="233" width="100" height="24" rx="12" fill="#2A4030" stroke="#C3D6C7"/>
+        <text class="d5aK" x="698" y="249" text-anchor="middle">HALF A DAY</text>
+
+        <rect x="30" y="274" width="600" height="50" rx="10" fill="#B0562C"/>
+        <text class="d5aT" x="48" y="295">5 · A model or a test</text>
+        <text class="d5aW" x="48" y="314">only when the question is about many things at once, or about confidence</text>
+        <rect x="648" y="287" width="100" height="24" rx="12" fill="#7C3A1C"/>
+        <text class="d5aK" x="698" y="303" text-anchor="middle">DAYS</text>
+        <text class="d5aN" x="762" y="303">most elaborate</text>
+
+        <rect x="30" y="340" width="14" height="14" rx="3" fill="#B0562C"/>
+        <text class="d5aN" x="52" y="351">Stop at the first rung that answers the question actually asked, and not one rung above it.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the rung above never answers the question below better; it answers a different one, more slowly</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Climb only until the question is answered<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The rule is one sentence: <strong>stop at the first rung that answers the question that was actually asked.</strong> Everything difficult about applying it lives in that last clause, because you have to know what was asked before you can tell whether it has been answered, and that is session 1's work.</p>
+        <p>The four slots are what point at the rung. An outcome that is a yes or a no needs a count. An outcome expressed as a share needs a rate. A decision slot that says "run it again or not" needs a comparison, because a comparison is exactly the shape of that decision: this against that, one wins. None of those three needs a model, and no model will make any of them more decidable.</p>
+        <p>Where you genuinely climb is when the question changes shape. "Which of these eleven things is driving it" is a many-things-at-once question and it lives at rung 5. "How sure are we that the difference is real rather than noise" is a confidence question and it also lives at rung 5, in a different course. If your question is neither of those, the climb is not buying you anything, and it is worth saying that out loud before you start rather than after you finish.</p>
+        <p>Run it against Daybreak. The head of marketing asks whether conversion rose enough to repeat the offer. That is a rate compared across two periods: rung 3, one hour. Session 4 climbed to rung 4 on it and found the answer had not moved, which is a real result and cost twenty extra minutes. Nobody needed rung 5 for any of the three questions, and nobody ever proposed it, because the questions were written down first.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why people climb too far<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Four honest reasons, none of them stupidity, and all four are worth recognising in yourself rather than in a colleague.</p>
+        <p><strong>A model looks like more work and therefore more value.</strong> Three days of method produces an artefact somebody can see you built. A count produces one line. The effort is legible in one case and invisible in the other, and effort is what most organisations actually reward.</p>
+        <p><strong>A count feels too simple to present.</strong> Standing up in front of eight people to say "it was 412, and that is 0.8 percent" feels like you have not done your job, even when it is the complete answer. This feeling is very strong and it is wrong, and naming it is most of the cure.</p>
+        <p><strong>The tooling makes the elaborate thing easy to reach for.</strong> Fitting a model is now four lines, and the four lines are on the first page of every tutorial you have ever read. The path of least resistance genuinely runs uphill on this ladder, which is a recent and slightly strange state of affairs.</p>
+        <p><strong>Nobody was ever criticised for being too rigorous.</strong> The failure mode is invisible, so it carries no social cost, so it never gets corrected.</p>
+        <p>Now the cost, plainly, because it is real and it is paid by somebody. You spend time you did not have. You produce a result that nobody in the room can check, which means it gets accepted rather than believed. And you produce a number whose failure modes are invisible to its audience: when a count is wrong, somebody notices, because they can recompute it over lunch. When a model is wrong, it is wrong quietly, and it stays in the deck.</p>
+        <table class="clean">
+          <tr><th>Rung</th><th>Answers</th><th>Roughly costs</th><th>Daybreak example</th></tr>
+          <tr><td><strong>1 A count</strong></td><td>How many were there?</td><td>Minutes</td><td>How many orders came through the promotion at all</td></tr>
+          <tr><td><strong>2 A rate</strong></td><td>How many out of how many?</td><td>Minutes</td><td>What share of those orders converted</td></tr>
+          <tr><td><strong>3 A comparison</strong></td><td>This against that, or before against after</td><td>An hour</td><td>Conversion in the twelve weeks after against the twelve before</td></tr>
+          <tr><td><strong>4 A breakdown</strong></td><td>The same comparison inside groups</td><td>Half a day</td><td>That same comparison inside email and social, which is where the revenue reversal showed up</td></tr>
+          <tr><td><strong>5 A model or a test</strong></td><td>Many things at once, or how confident you can be</td><td>Days, and a different course</td><td>Not needed for any of the three questions anybody actually asked</td></tr>
+        </table>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="part-2">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers rates</span>
+      <h2>A count becomes useful the moment it has a denominator</h2>
+      <span class="tag concept">5 min live</span>
+    </div>
+    <p class="lede">A bare count sits on a slide and nobody can do anything with it, because there is nothing to hold it against. The denominator is the part that turns it into something two people can argue about productively, and it is the part that gets left out.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 284" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three bare counts on the left, each with a question mark, the denominator each one needed in the middle column, and the resulting comparable figure on the right">
+        <style>
+          .d5bH { font: 800 11.5px Inter, sans-serif; fill: #2A4030; }
+          .d5bB { font: 400 11.5px Inter, sans-serif; fill: #1F2A22; }
+          .d5bW { font: 700 11.5px Inter, sans-serif; fill: #FFFFFF; }
+          .d5bN { font: 400 11px Inter, sans-serif; fill: #61705F; }
+          .d5bQ { font: 800 16px Inter, sans-serif; fill: #B0562C; }
+          .d5bE { fill: none; stroke: #5A7D62; stroke-width: 1.8; }
+        </style>
+        <defs>
+          <marker id="d5b-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0 0 L10 5 L0 10 z" fill="#5A7D62"/>
+          </marker>
+        </defs>
+
+        <text class="d5bH" x="30" y="26">A BARE COUNT</text>
+        <text class="d5bH" x="286" y="26">THE DENOMINATOR IT NEEDED</text>
+        <text class="d5bH" x="562" y="26">WHAT IT BECOMES</text>
+
+        <rect x="30" y="40" width="230" height="56" rx="9" fill="#FEF2F2" stroke="#FCA5A5"/>
+        <text class="d5bB" x="44" y="72">412 complaints</text>
+        <text class="d5bQ" x="234" y="76">?</text>
+        <path class="d5bE" d="M266 68 L280 68" marker-end="url(#d5b-arr)"/>
+        <rect x="286" y="40" width="250" height="56" rx="9" fill="#EDF3EE"/>
+        <text class="d5bN" x="300" y="72">out of how many orders</text>
+        <path class="d5bE" d="M542 68 L556 68" marker-end="url(#d5b-arr)"/>
+        <rect x="562" y="40" width="288" height="56" rx="9" fill="#2A4030"/>
+        <text class="d5bW" x="576" y="72">412 out of 51,000 orders = 0.8%</text>
+
+        <rect x="30" y="106" width="230" height="56" rx="9" fill="#FEF2F2" stroke="#FCA5A5"/>
+        <text class="d5bB" x="44" y="138">38 signups</text>
+        <text class="d5bQ" x="234" y="142">?</text>
+        <path class="d5bE" d="M266 134 L280 134" marker-end="url(#d5b-arr)"/>
+        <rect x="286" y="106" width="250" height="56" rx="9" fill="#EDF3EE"/>
+        <text class="d5bN" x="300" y="138">out of how many visitors</text>
+        <path class="d5bE" d="M542 134 L556 134" marker-end="url(#d5b-arr)"/>
+        <rect x="562" y="106" width="288" height="56" rx="9" fill="#3F5D45"/>
+        <text class="d5bW" x="576" y="138">38 out of 900 visitors = 4.2%</text>
+
+        <rect x="30" y="172" width="230" height="56" rx="9" fill="#FEF2F2" stroke="#FCA5A5"/>
+        <text class="d5bB" x="44" y="204">1,200 orders</text>
+        <text class="d5bQ" x="234" y="208">?</text>
+        <path class="d5bE" d="M266 200 L280 200" marker-end="url(#d5b-arr)"/>
+        <rect x="286" y="172" width="250" height="56" rx="9" fill="#EDF3EE"/>
+        <text class="d5bN" x="300" y="204">over how many weeks</text>
+        <path class="d5bE" d="M542 200 L556 200" marker-end="url(#d5b-arr)"/>
+        <rect x="562" y="172" width="288" height="56" rx="9" fill="#5A7D62"/>
+        <text class="d5bW" x="576" y="204">1,200 orders over 12 weeks = 100 a week</text>
+
+        <line x1="30" y1="248" x2="850" y2="248" stroke="#E0E8E1"/>
+        <rect x="30" y="260" width="14" height="14" rx="3" fill="#B0562C"/>
+        <text class="d5bN" x="52" y="271">A count with no denominator cannot be compared with anything, so it is not yet an answer.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the middle column is the judgement, and it belongs to whoever understands the business</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The denominator is the part that gets left out<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A count alone is almost never an answer, and the reason is mechanical rather than stylistic. An answer has to be comparable with something, either with the same quantity at another time, or with a different group, or with a target somebody set. A bare count is comparable with nothing, because the thing it is counting out of has been left unstated and may well have moved.</p>
+        <p>The denominator is what restores that. Two periods become comparable, two channels become comparable, two companies of very different sizes become comparable, all because you divided by the number of chances the thing had to happen.</p>
+        <p>Here is the part that gets skipped: <strong>choosing the denominator is a judgement, and it belongs to the person who understands the business, not to whoever wrote the query.</strong> Complaints per order and complaints per customer are different measures of different things, and they can move in opposite directions in the same quarter. There is no technical fact that decides between them. There is only the question being asked, which is why session 1 comes before this one and not after it.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Three denominators that change the story<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>Per customer.</strong> Divides by the people involved. This is the right denominator when the question is about individual experience: is a typical customer having a worse time than they were?</p>
+        <p><strong>Per order.</strong> Divides by the transactions. This is the right denominator when the question is about the process: is each trip through the system going worse than it was?</p>
+        <p><strong>Per opportunity-to-happen.</strong> Divides by the number of chances the thing had to occur at all, which is often neither of the above. Delivery complaints belong over deliveries, not over orders, because orders that were never delivered could not generate one.</p>
+        <p>The same numerator over these three denominators can point three different ways in the same period, and none of the three is wrong. Which is exactly why <strong>stating which one you used is part of stating the answer</strong>, not a footnote to it. "Complaints fell" is not a finding. "Complaints per delivery fell from 1.1 percent to 0.8 percent" is one, and it survives somebody asking what you divided by.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p>Complaints rose forty percent quarter on quarter, which sounds alarming, and somebody will have put it on a slide in red. Then you notice orders rose sixty percent in the same period. The complaint <em>rate</em> fell. Both sentences describe the same two columns of the same table, and only one of them is an answer to "are we getting worse".</p>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="part-3">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers the stopping decision</span>
+      <h2>Two questions that tell you to stop</h2>
+      <span class="tag concept">4 min live</span>
+    </div>
+    <p class="lede">Knowing the ladder exists does not tell you where to get off it. Two questions do, and both of them can be answered before any work starts rather than after it finishes.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 264" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two stopping questions, each with a yes branch and a no branch: would a more precise answer change the decision, and can the person who asked check this themselves">
+        <style>
+          .d5cH { font: 800 12px Inter, sans-serif; fill: #2A4030; }
+          .d5cT { font: 800 12px Inter, sans-serif; fill: #FFFFFF; }
+          .d5cK { font: 800 10px Inter, sans-serif; fill: #C3D6C7; letter-spacing: .05em; }
+          .d5cB { font: 400 11.5px Inter, sans-serif; fill: #1F2A22; }
+          .d5cN { font: 400 11px Inter, sans-serif; fill: #61705F; }
+          .d5cE { fill: none; stroke: #5A7D62; stroke-width: 1.8; }
+        </style>
+        <defs>
+          <marker id="d5c-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0 0 L10 5 L0 10 z" fill="#5A7D62"/>
+          </marker>
+        </defs>
+
+        <text class="d5cH" x="30" y="26">TWO QUESTIONS THAT TELL YOU TO STOP</text>
+
+        <rect x="30" y="42" width="300" height="72" rx="10" fill="#2A4030"/>
+        <text class="d5cK" x="48" y="62">QUESTION 1</text>
+        <text class="d5cT" x="48" y="84">Would a more precise answer</text>
+        <text class="d5cT" x="48" y="102">change the decision?</text>
+        <path class="d5cE" d="M336 78 L364 58 L390 58" marker-end="url(#d5c-arr)"/>
+        <path class="d5cE" d="M336 78 L364 98 L390 98" marker-end="url(#d5c-arr)"/>
+        <rect x="396" y="42" width="454" height="32" rx="8" fill="#EDF3EE"/>
+        <text class="d5cB" x="412" y="63">YES - climb one more rung, because the precision is buying something real</text>
+        <rect x="396" y="82" width="454" height="32" rx="8" fill="#F7E7DE"/>
+        <text class="d5cB" x="412" y="103">NO - stop here; narrowing it further is decoration nobody asked for</text>
+
+        <rect x="30" y="134" width="300" height="72" rx="10" fill="#3F5D45"/>
+        <text class="d5cK" x="48" y="154">QUESTION 2</text>
+        <text class="d5cT" x="48" y="176">Can the person who asked</text>
+        <text class="d5cT" x="48" y="194">check this themselves?</text>
+        <path class="d5cE" d="M336 170 L364 150 L390 150" marker-end="url(#d5c-arr)"/>
+        <path class="d5cE" d="M336 170 L364 190 L390 190" marker-end="url(#d5c-arr)"/>
+        <rect x="396" y="134" width="454" height="32" rx="8" fill="#EDF3EE"/>
+        <text class="d5cB" x="412" y="155">YES - it gets checked, trusted, acted on and remembered</text>
+        <rect x="396" y="174" width="454" height="32" rx="8" fill="#F7E7DE"/>
+        <text class="d5cB" x="412" y="195">NO - it gets accepted politely, and then quietly ignored</text>
+
+        <line x1="30" y1="226" x2="850" y2="226" stroke="#E0E8E1"/>
+        <rect x="30" y="238" width="14" height="14" rx="3" fill="#B0562C"/>
+        <text class="d5cN" x="52" y="249">Two noes means you already have the answer and should go and deliver it today.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - both questions can be answered before the work starts, which is the point of asking them</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Precision that changes nothing is decoration<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>If the decision is the same whether the answer is 12 percent or 18 percent, then spending three days narrowing a range down to a point is work that nobody needed and nobody will notice. The decision was already made by the time you had the range.</p>
+        <p>This sounds like a matter of taste and it is not, because the four-slot decision line from session 1 makes it checkable. You already wrote down what changes depending on the answer. So write the two candidate answers, the optimistic one and the pessimistic one, and ask what the decision slot says in each case. If it says the same thing twice, you are finished, and you were finished before you started.</p>
+        <p>The version of this that costs the most is the one where nobody ever wrote the decision down. Then there is no way to tell whether more precision would matter, so more precision always feels safer, and the work expands until somebody runs out of week. That is not rigour. It is an unanswered question about the fourth slot, showing up three weeks later as a scheduling problem.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Checkability is a feature, not a limitation<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>An answer the asker can verify gets trusted, acted on and remembered. An answer they cannot verify gets accepted politely and then quietly ignored, and you usually do not find out which happened.</p>
+        <p>A count and a rate are checkable by anybody holding the same spreadsheet. They can filter the rows themselves, get your number, and from that moment they believe it in a way that no amount of explanation produces. They can also find your mistake, which is uncomfortable for an afternoon and enormously valuable over a year.</p>
+        <p>That is a genuine advantage of the bottom of the ladder, not a consolation prize for having done something simple. It is the difference between a number the organisation now owns and a number that belongs only to you. And when the organisation owns a number, it starts appearing in other people's work, which is the actual goal.</p>
+        <p>None of this is an argument against rung 5. Some questions live up there and cannot be pulled down. It is an argument for knowing what you are giving up when you climb, so the climb is a decision rather than a reflex.</p>
+      </div>
+    </details>
+
+    <div class="tryrow" data-fn="wordcount" data-multiline="1" data-title="Demote your complicated number" data-hint="Write the question it was answering, then the simplest rung that would have answered it. If the answer is that the elaborate method was genuinely needed, write the reason - that is a good answer too." data-seed="" data-cta="Count it"></div>
+  </section>
+
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Build-along</span>
+      <h2>Demote one number</h2>
+      <span class="tag demo">★ 22 min · the number you brought</span>
+    </div>
+    <p class="lede">The number that took a model or a complicated method to produce, from your own work. Five passes, and at the end of it you will have two answers to the same question sitting next to each other.</p>
+
+    <div class="tick" data-stages="Name the question|Find the rung it used|Find the lowest rung that works|Compute it|Compare the two answers" data-title="Five passes, about four minutes each" data-foot="The output is two answers to one question, side by side, and a sentence saying whether the decision would have differed. Both possible endings are useful, and one of them is a defence of the method you used.">
+      <p class="tick-note" data-stage="0"><b>Name the question.</b> Write the question the number was actually answering, in the four slots: outcome, population, timeframe, decision. Not the question the method was designed for. The one somebody asked. If the decision slot is empty, ask the person today, because everything below depends on it.</p>
+      <p class="tick-note" data-stage="1"><b>Find the rung it used.</b> Which of the five did the method sit on? A forecast, a score, a segmentation or a significance claim is rung 5. A year-on-year breakdown by region is rung 4. Be honest about this; the point is not to make the method sound modest.</p>
+      <p class="tick-note" data-stage="2"><b>Find the lowest rung that works.</b> Read the question you wrote in pass one and go up from rung 1 until a rung answers it. Usually this lands one or two below where the method sat. Write which rung, and write the exact calculation: what is counted, and what it is divided by.</p>
+      <p class="tick-note" data-stage="3"><b>Compute it.</b> Actually do the arithmetic, tonight, in a spreadsheet. This step is not optional and it is not a thought experiment, because the interesting part is nearly always how long it took, and you cannot estimate that afterwards.</p>
+      <p class="tick-note" data-stage="4"><b>Compare the two answers.</b> Put them side by side and ask the only question that matters: would the decision have been different? Write the sentence either way. "The same call, in eleven minutes instead of three days" is a finding you can send to your manager tonight.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step"><p><strong>Use the question, not the method, to pick the rung.</strong> Methods do not have questions attached to them. They have defaults, and the default is whatever the person who wrote the tutorial was doing.</p></div>
+      <div class="step"><p><strong>Write the denominator down explicitly</strong> before you compute anything. Per customer, per order, per opportunity. If you cannot say which, you are not ready to compute and the rest of the evening will be wasted.</p></div>
+      <div class="step"><p><strong>Time yourself on the simple version.</strong> The number that persuades people is not the answer, it is the eleven minutes. Nobody argues with eleven minutes.</p></div>
+      <div class="step"><p><strong>Keep the two answers in the same place.</strong> A demotion nobody can see is not a demotion. One line, both numbers, the decision in each case.</p></div>
+      <div class="step"><p><strong>Check the mix before you trust the simple version.</strong> Session 4's four-word question still applies: did the mix change? A simple answer is not exempt from being a blend.</p></div>
+      <div class="step"><p><strong>Do not go back and tell the original author they wasted their time.</strong> Often it was you. The output is a habit for next time, not an audit of last quarter.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <p><strong>Finding that the elaborate method was needed is a good outcome.</strong> It means the question genuinely was about many things at once, or genuinely was about confidence, and now you have written down why. Keep that sentence. It is the thing you produce the next time somebody asks why this took three days, and it is far more convincing written before the work than reconstructed after it.</p>
+    </div>
+  </section>
+
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Before session 6</h2>
+      <span class="tag exercise">25 min</span>
+    </div>
+    <ol>
+      <li><strong>Demote a second number</strong>, and this time note how long the simple version took, to the minute. Two examples is where it stops feeling like a trick and starts feeling like a rate.</li>
+      <li><strong>Find one count in circulation that has no denominator</strong>, on a dashboard tile, in a weekly email, on a slide, and supply one. Then check whether the story it tells is the same story the bare count told.</li>
+      <li><strong>Find one report where a more precise answer would not have changed any decision.</strong> Write the decision it fed and the two candidate answers that lead to it. These are common and nobody flags them, because flagging them is awkward.</li>
+      <li><strong>Bring a chart or a slide somebody else made</strong>, ideally one you were expected to accept without much scrutiny. Session 6 reads one in front of everybody, in the order worth asking the questions.</li>
+    </ol>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions</h2>
+    </div>
+    <p>Clear all three and session 5 gets stamped in your passport.</p>
+
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · How far up the ladder should you climb on any given question?</p>
+      <button class="qopt" type="button">A · As far as the available time allows, since more rigour is always safer</button>
+      <button class="qopt" type="button">B · To rung 4 as a minimum, because breakdowns catch what headlines hide</button>
+      <button class="qopt" type="button">C · To the first rung that answers the question actually asked, which the four slots from session 1 identify: a yes-or-no outcome needs a count, a share needs a rate, and a decision slot reading "run it again or not" needs a comparison</button>
+      <button class="qopt" type="button">D · To whichever rung the method you know best sits on</button>
+      <p class="qwhy">The rung above never answers the question below better; it answers a different question, more slowly. You can only tell which rung you need if the question has been written down with its outcome, population, timeframe and decision, which is why session 1 comes first. Climbing past that point costs time and buys nothing.</p>
+    </div>
+
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · Why is a bare count rarely an answer on its own?</p>
+      <button class="qopt" type="button">A · It has no denominator, so it cannot be compared with another period, another group or a target; and choosing that denominator is a business judgement, because per customer, per order and per opportunity can point three different ways</button>
+      <button class="qopt" type="button">B · Counts are imprecise and should be replaced by estimates with error ranges</button>
+      <button class="qopt" type="button">C · Counts are too simple to present to senior stakeholders</button>
+      <button class="qopt" type="button">D · A count is only valid once the underlying data has been modelled</button>
+      <p class="qwhy">An answer has to be comparable with something, and a bare count is comparable with nothing because the thing it is counting out of was left unstated. Complaints rising forty percent while orders rise sixty percent is the standard case: the count went up, the rate went down. Stating which denominator you used is part of stating the answer.</p>
+    </div>
+
+    <div class="quiz-q" data-answer="3">
+      <p class="qtext">3 · Which pair of questions tells you it is time to stop climbing?</p>
+      <button class="qopt" type="button">A · Is the sample large enough, and is the effect statistically significant?</button>
+      <button class="qopt" type="button">B · Has anybody asked for more detail, and is there budget left?</button>
+      <button class="qopt" type="button">C · Is the method defensible, and has it been peer reviewed internally?</button>
+      <button class="qopt" type="button">D · Would a more precise answer change the decision, and can the person who asked check this themselves?</button>
+      <p class="qwhy">Both can be answered before the work starts. If the decision slot says the same thing at 12 percent and at 18 percent, narrowing the range is decoration. And an answer the asker can verify gets trusted and acted on, where one they cannot gets accepted politely and quietly ignored.</p>
+    </div>
+
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Sources covered</span>
+      <h2>What this session teaches, and where it came from</h2>
+    </div>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The ladder of five rungs</span><span class="note">Practitioner craft, stated as craft and carrying no citation; the ordering is by cost, and no study is claimed for it</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Denominators, and why the choice is a judgement</span><span class="note">Craft, with the mechanism stated plainly: comparability is what a denominator restores, and different denominators answer different questions</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Rates versus counts</span><span class="note">Craft; the worked illustration is arithmetic on figures written for this page, not a measurement of any business</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">When a model is genuinely needed</span><span class="note">Named as rung 5 and not taught here; owned by learn-intro-ml-with-phoebe</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Intervals and tests</span><span class="note">Named as the confidence half of rung 5 and not taught here; owned by learn-statistics-with-phoebe</span></div>
+    </div>
+    <p class="mono" style="margin-top:14px">Every fact on this page, and its verification tier, is recorded in the course's source map.</p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Session 5 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Five rungs</b><span>Count, rate, comparison, breakdown, model or test.</span></div>
+      <div class="cheat-item"><b>Stop at the first one that works</b><span>The rung above answers a different question, more slowly.</span></div>
+      <div class="cheat-item"><b>No denominator, no answer</b><span>A bare count is comparable with nothing.</span></div>
+      <div class="cheat-item"><b>The denominator is a judgement</b><span>Per customer, per order, per opportunity. Say which.</span></div>
+      <div class="cheat-item"><b>Precision that changes nothing</b><span>Same decision at 12% and 18%? You were already done.</span></div>
+      <div class="cheat-item"><b>Checkable beats clever</b><span>What they can verify gets used. What they cannot gets nodded at.</span></div>
+    </div>
+  </section>
+
+  <div class="callout next">
+    <span class="nx-pill">Next session</span>
+    <p>Everything so far has been about work you do: the question you were sent, the data you would need, the rows you looked at, the number you checked, the rung you stopped on. Session 6 is about work somebody hands you. The questions that find the weak spot in any chart, slide or deck, in the order worth asking them, and a final scorecard for the whole course. Bring the chart you did not make.</p>
+  </div>
+
+  <footer class="pagefoot">
+    <span>Session 5 of 6 · learn-data-thinking-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="04-the-four-answers-bench.html">← Prev: The four answers bench</a> &nbsp;·&nbsp; <a href="06-reading-somebody-elses-analysis.html">Next: Reading somebody else's analysis →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

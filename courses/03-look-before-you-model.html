@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- social:start -->
+<meta name="description" content="Session 3 of 6. The file is open and the temptation is to calculate. Twenty minutes of looking first is the highest-return time in the job: how many rows, what one row is, what is missing, what is duplicated, what is impossible.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Learn with Phoebe">
+<meta property="og:title" content="Look before you model - learn data thinking with phoebe">
+<meta property="og:description" content="Session 3 of 6. Five checks, twenty minutes, one written report. The defects that quietly break every later number are visible now and invisible once you aggregate.">
+<meta property="og:url" content="https://phoebefu6.github.io/learn-data-thinking-with-phoebe/courses/03-look-before-you-model.html">
+<meta property="og:image" content="https://phoebefu6.github.io/learn-data-thinking-with-phoebe/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Look before you model - learn data thinking with phoebe">
+<meta name="twitter:description" content="Session 3 of 6. Averages hide, rows show. Five checks you can run in a spreadsheet, and the six-line report they produce.">
+<meta name="twitter:image" content="https://phoebefu6.github.io/learn-data-thinking-with-phoebe/assets/og-cover.png">
+<!-- social:end -->
+<title>Session 3 · Look before you model - learn data thinking with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-data-thinking-with-phoebe</a> / Session 3 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn Data Thinking with Phoebe · Session 3 of 6</div>
+    <h1>Look before <span class="accent">you model</span></h1>
+    <p class="sub">You came out of session 2 with a question, a sketch of the table that would answer it, a list of the columns that do not exist, and one file that is closer to workable than the others. Tonight that file gets opened, and the first thing that happens is nothing. No aggregate, no chart, no calculation. Twenty minutes of plain looking, because the defects that quietly break every number you will produce later are all visible right now, in the rows, and every one of them becomes invisible the moment you start averaging things.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Everyone</span>
+      <span class="chip audience">Bring the file you chose</span>
+      <span class="chip audience">Any tool, even a spreadsheet</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-18 · The first twenty minutes</span>
+      <span class="a3" style="flex:5">18-40 · Build-along: run it on your file</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where we start</h2>
+    </div>
+    <p class="lede">The running situation is still <strong>Daybreak</strong>, the coffee subscription company, and the file is still the promotion data: rows that are customer-weeks either side of the autumn offer. The file is open, the question is written down, and the temptation is to calculate. Resist it for twenty minutes. Those twenty minutes are the highest-return time in the whole job, because the problems that quietly break every later number are visible here, plainly, in the rows, and they are invisible once you start aggregating. An average does not tell you it was computed over two populations. A total does not tell you a week was loaded twice. You only ever find out by looking first.</p>
+
+    <div class="legend">
+      <span class="pill">🎫 Clear all three quiz questions to stamp your passport</span>
+      <span class="pill">Live = presented in the 45 minutes</span>
+      <span class="pill">Self-study = the full depth, after class</span>
+    </div>
+
+    <div class="callout win">
+      <p><strong>★ What you walk out with tonight.</strong> A written twenty-minute report on your own file: how many rows it has, what one row is, what is missing, what is duplicated, what is impossible, and one thing you did not expect. Six lines, kept beside the analysis, and the last line is the one that pays for the other five.</p>
+    </div>
+
+    <div class="callout tip">
+      <p><strong>Where this sits on the shelf.</strong> Which chart to draw, and whether the chart is honest, is <span class="mono">learn-dataviz-with-phoebe</span>. Distributions, outlier tests and the formal treatment of missingness are <span class="mono">learn-statistics-with-phoebe</span>. Here the subject is the plain look that comes before either of those, done with nothing more than sorting and counting. In the standard process model for this work, CRISP-DM, published by a cross-industry consortium in August 2000, this is the second of six phases and it sits between understanding the business question and preparing the data. Its own description of the phase is to get familiar with the data, identify data quality problems and discover first insights, which is exactly tonight.</p>
+    </div>
+  </section>
+
+  <section class="section" id="part-1">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers the five checks</span>
+      <h2>Five things to look at, in twenty minutes</h2>
+      <span class="tag concept">6 min live</span>
+    </div>
+    <p class="lede">Five checks, four minutes each, in this order. None of them requires a tool you do not already have; a spreadsheet that can sort and count runs all five. What makes them worth doing is not that they are clever, it is that each one catches a specific defect that will otherwise travel silently into every number you produce for the rest of the project.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Five numbered panels in a row, one per check: how many rows, what is one row, what is missing, what is duplicated, what is impossible, each with what it catches, and a note that rows are counted first because a wrong count means a wrong file">
+        <style>
+          .d3aH { font: 800 12px Inter, sans-serif; fill: #2A4030; }
+          .d3aP { font: 800 10.5px Inter, sans-serif; fill: #FFFFFF; }
+          .d3aW { font: 400 10px Inter, sans-serif; fill: #EDF3EE; }
+          .d3aC { font: 400 10px Inter, sans-serif; fill: #F7E7DE; }
+          .d3aK { font: 800 9px Inter, sans-serif; fill: #FFFFFF; letter-spacing: .09em; }
+          .d3aB { font: 400 11px Inter, sans-serif; fill: #1F2A22; }
+          .d3aN { font: 400 11px Inter, sans-serif; fill: #61705F; }
+        </style>
+
+        <text class="d3aH" x="30" y="26">FIVE THINGS TO LOOK AT, IN TWENTY MINUTES</text>
+        <text class="d3aN" x="30" y="44">each one catches a defect that becomes invisible the moment you start aggregating</text>
+
+        <rect x="30" y="62" width="156" height="152" rx="10" fill="#2A4030"/>
+        <text class="d3aP" x="42" y="86">1 · How many rows</text>
+        <text class="d3aW" x="42" y="108">count them, and say</text>
+        <text class="d3aW" x="42" y="124">what you expected</text>
+        <text class="d3aW" x="42" y="140">before you look</text>
+        <text class="d3aK" x="42" y="166">CATCHES</text>
+        <text class="d3aW" x="42" y="184">the wrong file, or a</text>
+        <text class="d3aW" x="42" y="200">join that quietly grew</text>
+
+        <rect x="196" y="62" width="156" height="152" rx="10" fill="#3F5D45"/>
+        <text class="d3aP" x="208" y="86">2 · What is one row</text>
+        <text class="d3aW" x="208" y="108">one customer-week?</text>
+        <text class="d3aW" x="208" y="124">one order? say it,</text>
+        <text class="d3aW" x="208" y="140">then confirm it</text>
+        <text class="d3aK" x="208" y="166">CATCHES</text>
+        <text class="d3aW" x="208" y="184">counting a unit you</text>
+        <text class="d3aW" x="208" y="200">assumed but never saw</text>
+
+        <rect x="362" y="62" width="156" height="152" rx="10" fill="#5A7D62"/>
+        <text class="d3aP" x="374" y="86">3 · What is missing</text>
+        <text class="d3aW" x="374" y="108">which columns are</text>
+        <text class="d3aW" x="374" y="124">blank, and are the</text>
+        <text class="d3aW" x="374" y="140">blanks clustered</text>
+        <text class="d3aK" x="374" y="166">CATCHES</text>
+        <text class="d3aW" x="374" y="184">a whole group dropped</text>
+        <text class="d3aW" x="374" y="200">out of every split</text>
+
+        <rect x="528" y="62" width="156" height="152" rx="10" fill="#B0562C"/>
+        <text class="d3aP" x="540" y="86">4 · What is duplicated</text>
+        <text class="d3aC" x="540" y="108">is the thing that</text>
+        <text class="d3aC" x="540" y="124">should be unique</text>
+        <text class="d3aC" x="540" y="140">actually unique</text>
+        <text class="d3aK" x="540" y="166">CATCHES</text>
+        <text class="d3aC" x="540" y="184">every count and total</text>
+        <text class="d3aC" x="540" y="200">inflated at once</text>
+
+        <rect x="694" y="62" width="156" height="152" rx="10" fill="#7C3A1C"/>
+        <text class="d3aP" x="706" y="86">5 · What is impossible</text>
+        <text class="d3aC" x="706" y="108">sort each column and</text>
+        <text class="d3aC" x="706" y="124">read the top and the</text>
+        <text class="d3aC" x="706" y="140">bottom twenty rows</text>
+        <text class="d3aK" x="706" y="166">CATCHES</text>
+        <text class="d3aC" x="706" y="184">negative prices, ages</text>
+        <text class="d3aC" x="706" y="200">of 200, dates too old</text>
+
+        <rect x="30" y="232" width="820" height="48" rx="10" fill="#EDF3EE"/>
+        <text class="d3aH" x="46" y="254">IN THIS ORDER, AND ROWS FIRST</text>
+        <text class="d3aB" x="46" y="272">If the row count is wrong you are on the wrong file, and every later check is a check on the wrong thing.</text>
+
+        <rect x="30" y="296" width="14" height="14" rx="3" fill="#B0562C"/>
+        <text class="d3aN" x="52" y="307">None of the five needs a model, a test or a line of code. A spreadsheet that can sort does all of them.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - four minutes each, and the order matters because the first one decides whether the other four are worth running</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The five checks, and what each one saves you from<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>How many rows.</strong> Say the number you expect out loud before you look, then count. An order of magnitude off means you are not looking at what you think you are looking at, usually because a join multiplied rows or a filter you forgot is still applied. Skip this and every total, every count and every denominator underneath every rate is computed on the wrong file.</p>
+        <p><strong>What is one row.</strong> Confirm it, do not assume it. A row here is one customer-week, not one customer and not one order, and the difference decides what "average" even means. Get this wrong and the average order value you report is an average of something that is not an order.</p>
+        <p><strong>What is missing.</strong> List the columns that have blanks and roughly what share of the rows are blank in each. Blanks in the outcome column change what you are measuring; blanks in a grouping column change who is being compared, which is worse and quieter.</p>
+        <p><strong>What is duplicated.</strong> Check whether the thing that should be unique actually is. One week of orders loaded twice after a re-import inflates the count, the total, and the denominator of every rate in the same instant, and all three still look perfectly plausible.</p>
+        <p><strong>What is impossible.</strong> Sort each column and read the extremes. Negative prices, delivery dates before order dates, subscription starts before the company existed, ages of 200. Each one is a small number of rows and each one sits in the tail, which is exactly the part of a distribution that any maximum, any median delivery time and any "worst case" figure is made of.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Clustered missingness is the dangerous kind<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Not all blanks are equal, and the share of blanks tells you almost nothing on its own. Blanks spread evenly across the file are an annoyance: you lose a bit of data, the rows you lose look like the rows you keep, and the shape of the answer survives.</p>
+        <p>Blanks concentrated in one group, one time period or one channel are a different thing entirely. They do not reduce your data, they <em>remove a population from every later comparison</em>, and nothing in the output says so. The answer you produce then describes only who remained, but it is phrased as though it described everybody.</p>
+        <p>The Daybreak-shaped version: suppose the channel column is blank for most of the earliest weeks, because channel tagging was switched on partway through the period. Now every before-and-after comparison split by channel is quietly comparing two different populations. The "before" side is whatever subset happened to be tagged, the "after" side is everybody, and the difference between them contains a real effect and a change in who is included, mixed together with no way to separate them after the fact.</p>
+        <p>So the check is not "how many blanks". The check is: <strong>sort by the blank column and look at what else those rows have in common.</strong> If the blanks share a date range, a channel, a region or a source system, write that down in capital letters, because it constrains every comparison you are about to make. The formal treatment of missingness, the named mechanisms and what you are allowed to do about each, belongs to <span class="mono">learn-statistics-with-phoebe</span>; what belongs here is noticing that the blanks have a pattern at all.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="part-2">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers what aggregating hides</span>
+      <h2>Averages hide, rows show</h2>
+      <span class="tag concept">5 min live</span>
+    </div>
+    <p class="lede">Here is the same data twice. On the left, one number that is arithmetically correct and would survive any meeting. On the right, the rows it was computed from. Everything that is wrong with the file is on the right and none of it is on the left, and that asymmetry is permanent: you can always go from rows to a summary, and you can never go back.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 332" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="On the left a single reported average order value of 28 pounds, on the right the identical rows drawn one dot each, showing two separate clusters and three impossible negative values below a zero line">
+        <style>
+          .d3bH { font: 800 11.5px Inter, sans-serif; fill: #2A4030; }
+          .d3bBig { font: 800 34px Inter, sans-serif; fill: #2A4030; }
+          .d3bB { font: 400 11.5px Inter, sans-serif; fill: #1F2A22; }
+          .d3bN { font: 400 10.5px Inter, sans-serif; fill: #61705F; }
+          .d3bR { font: 800 10.5px Inter, sans-serif; fill: #991B1B; }
+          .d3bD { fill: #5A7D62; }
+          .d3bX { fill: #991B1B; }
+        </style>
+
+        <text class="d3bH" x="30" y="26">ONE SUMMARY, AND THE ROWS IT WAS COMPUTED FROM</text>
+
+        <rect x="30" y="46" width="300" height="176" rx="10" fill="#EDF3EE"/>
+        <text class="d3bH" x="48" y="74">WHAT GETS REPORTED</text>
+        <text class="d3bBig" x="48" y="124">GBP 28</text>
+        <text class="d3bB" x="48" y="148">average order value</text>
+        <text class="d3bN" x="48" y="178">one number, correct, and</text>
+        <text class="d3bN" x="48" y="195">it cannot tell you</text>
+        <text class="d3bN" x="48" y="212">what it left out</text>
+
+        <rect x="360" y="46" width="490" height="176" rx="10" fill="#FFFFFF" stroke="#E0E8E1"/>
+        <text class="d3bH" x="378" y="74">THE SAME ROWS, ONE DOT EACH</text>
+
+        <line x1="378" y1="194" x2="832" y2="194" stroke="#61705F" stroke-dasharray="4 3"/>
+        <text class="d3bN" x="798" y="189">GBP 0</text>
+
+        <circle class="d3bD" cx="400" cy="110" r="3"/><circle class="d3bD" cx="417" cy="102" r="3"/>
+        <circle class="d3bD" cx="432" cy="118" r="3"/><circle class="d3bD" cx="449" cy="97" r="3"/>
+        <circle class="d3bD" cx="464" cy="113" r="3"/><circle class="d3bD" cx="481" cy="106" r="3"/>
+        <circle class="d3bD" cx="496" cy="121" r="3"/><circle class="d3bD" cx="513" cy="99" r="3"/>
+        <circle class="d3bD" cx="528" cy="115" r="3"/><circle class="d3bD" cx="545" cy="108" r="3"/>
+        <circle class="d3bD" cx="560" cy="94" r="3"/><circle class="d3bD" cx="577" cy="117" r="3"/>
+        <circle class="d3bD" cx="592" cy="104" r="3"/><circle class="d3bD" cx="609" cy="119" r="3"/>
+        <circle class="d3bD" cx="624" cy="111" r="3"/><circle class="d3bD" cx="641" cy="98" r="3"/>
+        <circle class="d3bD" cx="656" cy="116" r="3"/><circle class="d3bD" cx="673" cy="107" r="3"/>
+        <circle class="d3bD" cx="688" cy="122" r="3"/><circle class="d3bD" cx="702" cy="101" r="3"/>
+
+        <circle class="d3bD" cx="402" cy="168" r="3"/><circle class="d3bD" cx="419" cy="161" r="3"/>
+        <circle class="d3bD" cx="434" cy="175" r="3"/><circle class="d3bD" cx="451" cy="164" r="3"/>
+        <circle class="d3bD" cx="466" cy="178" r="3"/><circle class="d3bD" cx="483" cy="167" r="3"/>
+        <circle class="d3bD" cx="498" cy="160" r="3"/><circle class="d3bD" cx="515" cy="173" r="3"/>
+        <circle class="d3bD" cx="530" cy="166" r="3"/><circle class="d3bD" cx="547" cy="179" r="3"/>
+        <circle class="d3bD" cx="562" cy="162" r="3"/><circle class="d3bD" cx="579" cy="171" r="3"/>
+        <circle class="d3bD" cx="594" cy="177" r="3"/><circle class="d3bD" cx="611" cy="165" r="3"/>
+        <circle class="d3bD" cx="626" cy="172" r="3"/><circle class="d3bD" cx="643" cy="163" r="3"/>
+        <circle class="d3bD" cx="658" cy="176" r="3"/><circle class="d3bD" cx="675" cy="169" r="3"/>
+        <circle class="d3bD" cx="690" cy="161" r="3"/><circle class="d3bD" cx="704" cy="174" r="3"/>
+
+        <circle class="d3bX" cx="752" cy="204" r="3.6"/><circle class="d3bX" cx="769" cy="209" r="3.6"/>
+        <circle class="d3bX" cx="786" cy="202" r="3.6"/>
+
+        <text class="d3bB" x="716" y="108">bulk boxes</text>
+        <text class="d3bB" x="716" y="170">single bags</text>
+        <text class="d3bR" x="616" y="215">3 impossible negatives</text>
+
+        <rect x="30" y="238" width="820" height="46" rx="10" fill="#EDF3EE"/>
+        <text class="d3bH" x="46" y="260">BOTH SIDES ARE THE IDENTICAL ROWS</text>
+        <text class="d3bB" x="46" y="278">A summary is a lossy compression, and nothing in the summary tells you what it lost.</text>
+
+        <rect x="30" y="298" width="14" height="14" rx="3" fill="#B0562C"/>
+        <text class="d3bN" x="52" y="309">Rows first, then the summary. The other order tells you what to expect and you then see it.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - GBP 28 is nobody's order; the rows are two clusters and three values that cannot exist</figcaption>
+    </figure>
+
+    <table class="clean">
+      <tr><th>What you see in the summary</th><th>What the rows would have shown</th><th>The number it breaks</th></tr>
+      <tr><td>Average order value: GBP 28</td><td>Two clusters, single bags and bulk boxes, with almost nothing in between</td><td>Any plan built on one typical order, because no order is typical</td></tr>
+      <tr><td>Orders this quarter: up 4 percent</td><td>A re-import that recorded one week of orders twice</td><td>Every count and total, and the denominator under every rate</td></tr>
+      <tr><td>Conversion by channel, before against after</td><td>Channel is blank for most of the earliest weeks</td><td>The comparison itself, which is now about two different populations</td></tr>
+      <tr><td>Median delivery time: 3 days</td><td>Rows where the delivery date sits before the order date</td><td>The tail, which is the part customers actually complain about</td></tr>
+    </table>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Look at the rows, then the summary, never the other way round<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A summary is a lossy compression of the rows. That is not a criticism, it is the entire point of a summary, and it is why they are useful. What matters is the consequence: <strong>you cannot tell from the summary what it lost.</strong> Twenty-eight pounds is compatible with a file where every order is twenty-eight pounds, and equally compatible with a file that is half nine-pound bags and half forty-seven-pound boxes with nothing in the middle. The number is identical. The business is not.</p>
+        <p>Three specific things hide inside a summary, and all three change the summary itself once you find them. <strong>Clusters:</strong> two populations averaged into a middle that describes neither, so the "typical customer" you plan around does not exist. <strong>Impossible values:</strong> a handful of negatives or absurd dates that drag a mean, and that live in the tail where maximums and percentiles are made. <strong>Duplicates:</strong> rows counted twice, which move the count, the total and the average all at once.</p>
+        <p>Remove any of the three and the summary moves. That is the proof that the summary was never independent of the defects; it was quietly made out of them. Which is why the order is rows first, summary second, and never the reverse. Looking at the summary first tells you what to expect, and once you expect something you will find it in the rows, and you will stop looking.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What to write down while looking<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A short written record beats a remembered one, and it beats it by a wide margin, because what you remember three weeks later is the conclusion and not the caveats. Six lines is enough:</p>
+        <ol>
+          <li><strong>Row count</strong>, and what you expected before you counted.</li>
+          <li><strong>What one row is</strong>, stated as a sentence, and how you confirmed it.</li>
+          <li><strong>Columns with blanks</strong>, roughly what share, and whether the blanks cluster.</li>
+          <li><strong>Duplicate check</strong>, what you checked for uniqueness and what came back.</li>
+          <li><strong>Anything impossible</strong>, how many rows, and which column.</li>
+          <li><strong>One surprise.</strong> Something you did not expect to see.</li>
+        </ol>
+        <p>Keep it with the analysis, in the same folder or the same notebook, not in a message thread. This is the thing you will be asked for when somebody challenges a number three months later, and by then the file will have been refreshed, the blanks may have been backfilled, and you will have no way of reconstructing what the data looked like on the day you used it.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p>The most common version of being challenged is not an accusation, it is somebody rerunning your query six months on and getting a different number. Without the report you have no way to tell whether the business changed, the data changed, or you made a mistake. With it, that is usually a five-minute conversation.</p>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="part-3">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers stopping rules</span>
+      <h2>When twenty minutes is enough, and when it is not</h2>
+      <span class="tag concept">4 min live</span>
+    </div>
+    <p class="lede">The five checks have exactly two outcomes and you need to have decided in advance what you do about each. If they pass, you proceed, and the report goes in the folder. If one fails, you have three honest replies available and one dishonest one, and the dishonest one is the default that everybody drifts into because it requires no decision at all.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 326" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A two-outcome flow from the five checks: if all five pass, proceed and keep the report; if a check fails, three responses - fix it and record the fix, exclude and say what you excluded, or stop and go back to the gap list - with a note that proceeding silently is the only response that is not respectable">
+        <style>
+          .d3cH { font: 800 11px Inter, sans-serif; fill: #2A4030; }
+          .d3cT { font: 800 11px Inter, sans-serif; fill: #FFFFFF; }
+          .d3cW { font: 400 10px Inter, sans-serif; fill: #EDF3EE; }
+          .d3cC { font: 400 10px Inter, sans-serif; fill: #F7E7DE; }
+          .d3cB { font: 400 11px Inter, sans-serif; fill: #1F2A22; }
+          .d3cN { font: 400 10px Inter, sans-serif; fill: #61705F; }
+          .d3cD { font: 400 10px Inter, sans-serif; fill: #3F5D45; }
+          .d3cR { font: 800 11px Inter, sans-serif; fill: #991B1B; }
+          .d3cE { fill: none; stroke: #B0562C; stroke-width: 1.8; }
+        </style>
+        <defs>
+          <marker id="d3c-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0 0 L10 5 L0 10 z" fill="#B0562C"/>
+          </marker>
+        </defs>
+
+        <text class="d3cH" x="30" y="24">AFTER THE TWENTY MINUTES, TWO WAYS OUT</text>
+
+        <rect x="30" y="96" width="170" height="76" rx="10" fill="#2A4030"/>
+        <text class="d3cT" x="44" y="126">THE FIVE CHECKS</text>
+        <text class="d3cW" x="44" y="146">twenty minutes, one file</text>
+
+        <path class="d3cE" d="M204 122 L222 122 L222 88 L240 88" marker-end="url(#d3c-arr)"/>
+        <path class="d3cE" d="M204 148 L222 148 L222 190 L240 190" marker-end="url(#d3c-arr)"/>
+
+        <rect x="246" y="64" width="150" height="48" rx="10" fill="#C3D6C7"/>
+        <text class="d3cH" x="262" y="88">ALL FIVE PASS</text>
+        <text class="d3cD" x="262" y="104">nothing to fix</text>
+
+        <path class="d3cE" d="M400 88 L420 88" marker-end="url(#d3c-arr)"/>
+
+        <rect x="426" y="64" width="424" height="48" rx="10" fill="#EDF3EE"/>
+        <text class="d3cB" x="442" y="86">Proceed, and keep the twenty-minute report beside the analysis</text>
+        <text class="d3cN" x="442" y="103">the record is what makes the number defensible three months later</text>
+
+        <rect x="246" y="166" width="150" height="48" rx="10" fill="#FEF2F2" stroke="#FCA5A5"/>
+        <text class="d3cR" x="262" y="190">A CHECK FAILS</text>
+        <text class="d3cN" x="262" y="206">three honest replies</text>
+
+        <path class="d3cE" d="M400 190 L412 190 L412 144 L420 144" marker-end="url(#d3c-arr)"/>
+        <path class="d3cE" d="M400 192 L420 192" marker-end="url(#d3c-arr)"/>
+        <path class="d3cE" d="M400 190 L412 190 L412 240 L420 240" marker-end="url(#d3c-arr)"/>
+
+        <rect x="426" y="124" width="424" height="40" rx="10" fill="#5A7D62"/>
+        <text class="d3cT" x="442" y="142">Fix it, and write down what you changed</text>
+        <text class="d3cW" x="442" y="158">a fix is a decision that changes the answer</text>
+
+        <rect x="426" y="172" width="424" height="40" rx="10" fill="#3F5D45"/>
+        <text class="d3cT" x="442" y="190">Exclude, and say out loud what you excluded</text>
+        <text class="d3cW" x="442" y="206">an exclusion nobody hears about is a silent edit</text>
+
+        <rect x="426" y="220" width="424" height="40" rx="10" fill="#B0562C"/>
+        <text class="d3cT" x="442" y="238">Stop, and go back to the gap list from session 2</text>
+        <text class="d3cC" x="442" y="254">some failures are not repairs, they are missing data</text>
+
+        <rect x="30" y="274" width="820" height="34" rx="10" fill="#FEF2F2" stroke="#FCA5A5"/>
+        <text class="d3cB" x="48" y="296">All three are respectable. Proceeding in silence is the fourth reply and the only one that is not.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the fourth reply needs no decision, costs nothing today, and is the one that ships a defect nobody downstream can see</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Three responses to a failed check, and all three are respectable<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>Fix it.</strong> The duplicate week gets removed, the negative prices get corrected against the source system, the date typo gets repaired. This is the right answer when you know what the correct value is and can say where you got it. It is not the right answer when you are guessing, and the line between the two is whether you can name your source in one sentence.</p>
+        <p><strong>Exclude it.</strong> Drop the rows, and state the exclusion as part of the result rather than as a footnote: "computed on 1,140 of 1,186 rows, excluding 46 with no channel recorded". An exclusion said out loud is a limitation. The same exclusion unsaid is a silent edit to the population, and the reader believes they are looking at everybody.</p>
+        <p><strong>Stop.</strong> Sometimes the failed check is not a defect at all, it is the gap list from session 2 arriving late. If the column you need is blank for the half of the period you care about, no fix and no exclusion rescues it, and the honest output is a sentence saying what is missing and what would be needed. That sentence is worth more than a number computed on the half that survived.</p>
+        <p>What is not respectable is the fourth option, which is to proceed silently. It requires no decision, it costs nothing today, and it produces a number that carries a defect nobody downstream can see, including the version of you who quotes it in six months.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Recording the fix is the part people skip<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Every fix is a decision, and every decision changes the answer. Removing forty-six blank-channel rows changes the denominator. Repairing nine impossible dates changes the median. Dropping a duplicated week changes the total and the growth rate computed from it. None of those changes announce themselves in the output, so the record of them is the only thing that makes the analysis reproducible by anybody, and the person most often defeated by its absence is you.</p>
+        <p>The format does not matter and the discipline does: <strong>one line per fix, in the same place as the twenty-minute report.</strong> What you changed, how many rows, and why. "Dropped week 11, duplicated by the 4 Oct re-import, 46 rows" is a complete entry and takes fifteen seconds to write.</p>
+        <p>The test of whether the record is good enough is simple. Hand the file and the record to a colleague and ask whether they could reproduce your number without asking you a question. If the answer is no, the missing piece is almost always a fix you made without noticing you were making it.</p>
+      </div>
+    </details>
+
+    <div class="tryrow" data-fn="wordcount" data-multiline="1" data-title="Write your twenty-minute report" data-hint="Six lines: row count, what one row is, what is blank and roughly how much, duplicates found, anything impossible, one surprise. If the surprise line is empty you probably have not looked yet." data-seed="" data-cta="Count it"></div>
+  </section>
+
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Build-along</span>
+      <h2>Twenty minutes on your own file</h2>
+      <span class="tag demo">★ 22 min · the file you chose in session 2</span>
+    </div>
+    <p class="lede">The file you brought, whatever tool it opens in. A spreadsheet is entirely sufficient for all five checks and there is no advantage tonight to anything more powerful. Four minutes each, in order, and write as you go rather than at the end.</p>
+
+    <div class="tick" data-stages="Count the rows|Confirm one row|Find the blanks|Find the duplicates|Find the impossible" data-title="Five passes, about four minutes each" data-foot="The output is six written lines about your own file. If you finish with nothing on the surprise line, run the sort in check five again and read further down, because a file with genuinely no surprises in it is rare enough to be worth doubting.">
+      <p class="tick-note" data-stage="0"><b>Count the rows.</b> Write down the number you expect first, then count. Note both, and note the gap. If you are an order of magnitude out, stop and find out why before doing anything else, because nothing after this point means anything until that is resolved.</p>
+      <p class="tick-note" data-stage="1"><b>Confirm one row.</b> Write the sentence: "one row is one ___". Then prove it: find two rows that should be the same thing, the same customer in the same week, the same order, and check that they really are one row and not two. If they are two, your sentence is wrong and you have just saved yourself a week.</p>
+      <p class="tick-note" data-stage="2"><b>Find the blanks.</b> Sort each column and the blanks collect at one end where you can count them. For every column with blanks, sort by that column and look at what else those rows share: a date range, a channel, a source system. A shared pattern goes in the report in capital letters.</p>
+      <p class="tick-note" data-stage="3"><b>Find the duplicates.</b> Decide what should be unique, the order id, or the customer plus the week, then check that it is. In a spreadsheet, sort by that combination and look for neighbours that match, or count distinct values and compare with the row count. Equal means clean. Fewer means duplicates.</p>
+      <p class="tick-note" data-stage="4"><b>Find the impossible.</b> Sort each column ascending and read the top twenty rows, then descending and read the top twenty again. Negatives where nothing can be negative, dates before the business existed or after today, quantities of zero, text in a number column. Four minutes finds almost all of it.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step"><p><strong>Write as you go, not at the end.</strong> The surprise you noticed in check two is gone by check five. A line written in the moment costs ten seconds; reconstructing it later costs the whole twenty minutes again.</p></div>
+      <div class="step"><p><strong>Sorting is the whole technique.</strong> Sorting a column puts the blanks at one end and the impossible values at the other, which is why four of the five checks are just a sort and a look. You do not need a tool that does anything cleverer.</p></div>
+      <div class="step"><p><strong>Say what one row is before you look at any column.</strong> Everything downstream, every average, every count, every rate, is defined relative to that sentence, and getting it wrong invalidates the lot silently.</p></div>
+      <div class="step"><p><strong>Count distinct and compare with the row count.</strong> One number against another is the fastest duplicate check there is, and it works in every tool including the spreadsheet you already have open.</p></div>
+      <div class="step"><p><strong>If a check fails, pick one of the three replies now.</strong> Fix, exclude or stop, and write the line before you carry on. Deciding later is how proceeding silently happens to careful people.</p></div>
+      <div class="step"><p><strong>Keep the report with the file.</strong> Same folder, same notebook, not a message thread. Session 4 calculates on this data, and the first question anybody asks about a surprising number is what the data looked like.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <p><strong>The surprise line is the one that pays for the twenty minutes.</strong> The other five lines confirm things you mostly expected, and that has value, but it is quiet value. The surprise is where the twenty minutes returns something you could not have got any other way: a column that means something different from its name, a population you did not know was in the file, a period where the collection changed. Nobody has ever run these five checks on a real file and found nothing.</p>
+    </div>
+  </section>
+
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Before session 4</h2>
+      <span class="tag exercise">25 min</span>
+    </div>
+    <ol>
+      <li><strong>Finish the twenty-minute report on your file</strong> and keep it with the analysis, in the same folder, not in a chat window. Six lines, including the surprise, and one line per fix if you made any.</li>
+      <li><strong>Run the same five checks on a dataset somebody else prepared</strong> and note what you find. Data handed to you as finished is the data you are least likely to look at and most likely to trust, which is an unfortunate combination.</li>
+      <li><strong>Find one number in circulation</strong> in your organisation that would change if duplicates were removed, and find out whether anybody has ever checked. A dashboard tile fed by a re-imported table is the usual candidate.</li>
+      <li><strong>Bring a laptop</strong>, because session 4 is a bench and everybody drives. Bring one before-and-after figure from your own work as well, whatever it measures.</li>
+    </ol>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions</h2>
+    </div>
+    <p>Clear all three and session 3 gets stamped in your passport.</p>
+
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · Two files each have ten percent of their channel column blank. In one the blanks are scattered evenly; in the other they are concentrated in the first six weeks. Why is the second more dangerous?</p>
+      <button class="qopt" type="button">A · It is not; ten percent is ten percent, and the share is what matters</button>
+      <button class="qopt" type="button">B · It is easier to spot, so it will be caught anyway</button>
+      <button class="qopt" type="button">C · Clustered blanks remove a whole group from every later comparison, so the before side of any channel split is a different population from the after side, and the answer describes only who remained while being phrased as though it described everybody</button>
+      <button class="qopt" type="button">D · Scattered blanks are worse because they affect every group at once</button>
+      <p class="qwhy">Scattered blanks cost you data but leave the shape of the answer intact, because the rows you lose resemble the rows you keep. Clustered blanks remove a population, and nothing in the output says so. The check is therefore not how many blanks but what the blank rows have in common when you sort by them.</p>
+    </div>
+
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · Why look at the rows before the summary rather than the other way round?</p>
+      <button class="qopt" type="button">A · A summary is a lossy compression and cannot tell you what it lost; clusters, impossible values and duplicates all hide inside it, and all three change the summary itself once you find and remove them</button>
+      <button class="qopt" type="button">B · Rows are more accurate than summaries</button>
+      <button class="qopt" type="button">C · Summaries are only reliable for large datasets</button>
+      <button class="qopt" type="button">D · It does not matter, as long as both get done at some point</button>
+      <p class="qwhy">The same average is compatible with a file where every value is the average and with a file that is two clusters and nothing in between; the number is identical and the business is not. Because removing any of the three hidden defects moves the summary, the summary was never independent of them. And reading the summary first tells you what to expect, after which you will find it and stop looking.</p>
+    </div>
+
+    <div class="quiz-q" data-answer="3">
+      <p class="qtext">3 · A check fails: one week of orders appears twice after a re-import. Which responses are legitimate?</p>
+      <button class="qopt" type="button">A · Only fixing it; excluding rows and stopping are both avoidance</button>
+      <button class="qopt" type="button">B · Only stopping, because the file can no longer be trusted at all</button>
+      <button class="qopt" type="button">C · Any of them, including carrying on without mentioning it, since the effect is small</button>
+      <button class="qopt" type="button">D · Fixing it and recording the fix, excluding the rows and saying what was excluded, or stopping and going back to the gap list; proceeding silently is the only response that is not legitimate</button>
+      <p class="qwhy">All three named responses are respectable and which one is right depends on whether you know the correct value, whether the rows can be dropped without changing who is being described, and whether the problem is a defect or a missing column. Proceeding silently requires no decision and costs nothing today, which is exactly why it is the default drift. It ships a defect that nobody downstream can see.</p>
+    </div>
+
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Sources covered</span>
+      <h2>What this session teaches, and where it came from</h2>
+    </div>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The five checks</span><span class="note">Practitioner craft, stated as craft. No citation is offered because none exists; what is offered is the specific downstream number each check protects</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Clustered missingness</span><span class="note">Craft, with the mechanism stated rather than asserted: clustered blanks remove a population from the comparison, so the answer describes only who remained</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">CRISP-DM's data-understanding phase</span><span class="note">Read from the primary consortium document, dated August 2000; named here only as where this work sits in the standard process, with no claim about its effect on outcomes</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Formal treatment of missingness and outliers</span><span class="note">Named and deliberately not taught here; the mechanisms, tests and what each permits belong to the statistics course</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The twenty-minute report</span><span class="note">Craft. Six lines and one line per fix; no study is cited because no study of it was found</span></div>
+    </div>
+    <p class="mono" style="margin-top:14px">Every fact on this page, and its verification tier, is recorded in the course's source map.</p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Session 3 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Five checks</b><span>How many, what is one row, missing, duplicated, impossible.</span></div>
+      <div class="cheat-item"><b>Expect, then count</b><span>Say the row count out loud before you look at it.</span></div>
+      <div class="cheat-item"><b>Blanks with a pattern</b><span>Sort by the blank column. Shared dates or channel means a lost group.</span></div>
+      <div class="cheat-item"><b>Summaries are lossy</b><span>Clusters, impossibles and duplicates all hide inside one number.</span></div>
+      <div class="cheat-item"><b>Three replies, not four</b><span>Fix, exclude, stop. Proceeding in silence is the one to refuse.</span></div>
+      <div class="cheat-item"><b>The surprise line</b><span>Empty means you have not looked yet. It pays for the twenty minutes.</span></div>
+    </div>
+  </section>
+
+  <div class="callout next">
+    <span class="nx-pill">Next session</span>
+    <p>The data is now understood, which means it is finally safe to calculate something with it. Session 4 is a bench: one dataset, three questions people actually asked about the Daybreak promotion, and each one answered four different ways. Two of the three get answers. One of the three headlines turns out to be the exact opposite of the truth, and both numbers are arithmetically correct. Bring a laptop and a before-and-after figure of your own.</p>
+  </div>
+
+  <footer class="pagefoot">
+    <span>Session 3 of 6 · learn-data-thinking-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="02-what-you-would-need-to-know.html">← Prev: What you would need to know</a> &nbsp;·&nbsp; <a href="04-the-four-answers-bench.html">Next: The four answers bench →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

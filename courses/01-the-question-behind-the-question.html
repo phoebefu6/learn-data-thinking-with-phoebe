@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- social:start -->
+<meta name="description" content="Session 1 of 6. 'Can you look at the numbers' is not a question. The four things that turn a request into something answerable, and a worked example of how a claim everybody repeats about this job turns out to be four citations deep and nobody measured anything.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Learn with Phoebe">
+<meta property="og:title" content="The question behind the question - learn data thinking with phoebe">
+<meta property="og:description" content="Session 1 of 6. An outcome, a population, a timeframe, and the decision waiting on the other side. Without all four you are guessing at what somebody meant.">
+<meta property="og:url" content="https://phoebefu6.github.io/learn-data-thinking-with-phoebe/courses/01-the-question-behind-the-question.html">
+<meta property="og:image" content="https://phoebefu6.github.io/learn-data-thinking-with-phoebe/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The question behind the question - learn data thinking with phoebe">
+<meta name="twitter:description" content="Session 1 of 6. What makes a request answerable, and a claim about this job taken apart citation by citation.">
+<meta name="twitter:image" content="https://phoebefu6.github.io/learn-data-thinking-with-phoebe/assets/og-cover.png">
+<!-- social:end -->
+<title>Session 1 · The question behind the question - learn data thinking with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-data-thinking-with-phoebe</a> / Session 1 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn Data Thinking with Phoebe · Session 1 of 6</div>
+    <h1>The question behind <span class="accent">the question</span></h1>
+    <p class="sub">"Can you look at the numbers and see if the promotion worked?" That sentence arrives in some form at every analyst, every week, and it is not a question. It has no outcome, no population, no timeframe, and no stated decision attached to it, which means four people can hear it and start four different pieces of work, all defensible, three of them useless. Tonight is about the twenty minutes that turn a request into something that has an answer, and about the habit that makes the rest of the course possible: asking what the sentence actually claims before you go and compute anything.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Everyone</span>
+      <span class="chip audience">Bring a real request somebody sent you</span>
+      <span class="chip audience">No maths, no code</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-18 · The four slots, and a claim taken apart</span>
+      <span class="a3" style="flex:5">18-40 · Build-along: rewrite three real requests</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where we start</h2>
+    </div>
+    <p class="lede">This course runs on one promotion. <strong>Daybreak</strong>, a coffee subscription company, ran an autumn offer, and three people want to know whether it worked: the founder, the head of marketing, and the person who has to decide whether to run it again in spring. They use almost the same words and they want three different things. By session 4 a bench answers two of their questions and refuses the third, and the refusal is the most useful output of the three.</p>
+
+    <div class="legend">
+      <span class="pill">🎫 Clear all three quiz questions to stamp your passport</span>
+      <span class="pill">Live = presented in the 45 minutes</span>
+      <span class="pill">Self-study = the full depth, after class</span>
+    </div>
+
+    <div class="callout win">
+      <p><strong>★ What you walk out with tonight.</strong> Three real requests from your own work rewritten as questions with all four slots filled, and one of them identified as the sort that cannot be answered with what exists, which is a finding you can send back the same day.</p>
+    </div>
+
+    <div class="callout tip">
+      <p><strong>Where this sits on the shelf.</strong> Nothing here involves a model, a p-value or a line of code. Training a model and reading its accuracy honestly is <span class="mono">learn-intro-ml-with-phoebe</span>. Confidence intervals and hypothesis tests are <span class="mono">learn-statistics-with-phoebe</span>. Choosing the chart and checking it is honest is <span class="mono">learn-dataviz-with-phoebe</span>. Here the subject is the work that happens before any of those, which is deciding what is being asked and whether it can be answered at all.</p>
+    </div>
+  </section>
+
+  <section class="section" id="part-1">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers the four slots</span>
+      <h2>Four slots, and a request is not a question until all four are full</h2>
+      <span class="tag concept">6 min live</span>
+    </div>
+    <p class="lede">The same eleven words, heard by four people, become four different projects. The fix is not to ask "what do you mean"; that gets you a restatement of the same sentence. The fix is to fill four specific slots out loud and let the person correct you.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A vague request at the top and four slots beneath it - outcome, population, timeframe and decision - each filled in for the Daybreak promotion, with a note that an unfilled slot is filled by a guess">
+        <style>
+          .d1aH { font: 800 12px Inter, sans-serif; fill: #2A4030; }
+          .d1aT { font: 800 11.5px Inter, sans-serif; fill: #FFFFFF; }
+          .d1aB { font: 400 11px Inter, sans-serif; fill: #1F2A22; }
+          .d1aW { font: 400 11px Inter, sans-serif; fill: #EDF3EE; }
+          .d1aN { font: 400 11px Inter, sans-serif; fill: #61705F; }
+          .d1aQ { font: 400 12px Inter, sans-serif; fill: #1F2A22; font-style: italic; }
+        </style>
+
+        <rect x="30" y="24" width="820" height="52" rx="10" fill="#FEF2F2" stroke="#FCA5A5"/>
+        <text class="d1aN" x="46" y="46">WHAT ARRIVES</text>
+        <text class="d1aQ" x="46" y="66">"Can you look at the numbers and see if the promotion worked?"</text>
+
+        <rect x="30" y="98" width="200" height="96" rx="10" fill="#2A4030"/>
+        <text class="d1aT" x="46" y="122">1 · Outcome</text>
+        <text class="d1aW" x="46" y="142">what counts as worked</text>
+        <text class="d1aW" x="46" y="162">conversion? order value?</text>
+        <text class="d1aW" x="46" y="182">customers who stay?</text>
+
+        <rect x="242" y="98" width="200" height="96" rx="10" fill="#3F5D45"/>
+        <text class="d1aT" x="258" y="122">2 · Population</text>
+        <text class="d1aW" x="258" y="142">who is included</text>
+        <text class="d1aW" x="258" y="162">everyone? new only?</text>
+        <text class="d1aW" x="258" y="182">one channel or all?</text>
+
+        <rect x="454" y="98" width="200" height="96" rx="10" fill="#5A7D62"/>
+        <text class="d1aT" x="470" y="122">3 · Timeframe</text>
+        <text class="d1aW" x="470" y="142">compared with when</text>
+        <text class="d1aW" x="470" y="162">the weeks before?</text>
+        <text class="d1aW" x="470" y="182">the same weeks last year?</text>
+
+        <rect x="666" y="98" width="184" height="96" rx="10" fill="#B0562C"/>
+        <text class="d1aT" x="682" y="122">4 · Decision</text>
+        <text class="d1aW" x="682" y="142">what changes after</text>
+        <text class="d1aW" x="682" y="162">run it again in spring,</text>
+        <text class="d1aW" x="682" y="182">or do not</text>
+
+        <rect x="30" y="212" width="820" height="60" rx="10" fill="#EDF3EE"/>
+        <text class="d1aH" x="46" y="236">THE SAME REQUEST, ANSWERABLE</text>
+        <text class="d1aB" x="46" y="258">"Did conversion among new subscribers rise in the twelve weeks after the offer, against the twelve before, enough to run it again?"</text>
+
+        <rect x="30" y="292" width="820" height="46" rx="10" fill="#FFFFFF" stroke="#E0E8E1"/>
+        <text class="d1aB" x="46" y="320">An empty slot does not stay empty. You fill it with a guess, silently, and nobody finds out which guess until the meeting.</text>
+
+        <rect x="30" y="354" width="14" height="14" rx="3" fill="#B0562C"/>
+        <text class="d1aN" x="52" y="365">Say all four out loud and let them correct you. People cannot specify a question but they can always spot a wrong one.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the fourth slot is the one people skip, and it is the one that decides whether the work is worth doing</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Why the decision slot comes last and matters most<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The first three slots make a question computable. The fourth decides whether computing it is worth anybody's afternoon, and it is the one almost nobody asks about.</p>
+        <p>Ask it plainly: <strong>what will you do differently depending on what I find?</strong> Three answers are common, and all three are useful. Sometimes it is specific, which tells you exactly how precise the answer needs to be. Sometimes it is "nothing, I am just curious", which is a fine answer and tells you to spend twenty minutes rather than two days. And sometimes the honest answer is "we have already decided, I need the number for the deck", which is also worth knowing, because that is not analysis and pretending otherwise wastes everybody's time.</p>
+        <p>The version of this question with the best pedigree is from DARPA, where the Heilmeier Catechism asks a programme manager what they are trying to do in plain language, who cares, what happens if they succeed, and how long it will take. The two that transfer directly into an analysis request are <em>who cares</em> and <em>what difference will it make</em>, and asking them at the start of a piece of work costs one sentence.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Where the four slots come from, and what is behind them<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>This is practitioner craft rather than a research finding, and it is worth being straight about that. There is a long-standing process model for analysis work, CRISP-DM, published by a cross-industry consortium in 2000, and its first phase is business understanding rather than data understanding, which encodes the same idea: you are supposed to establish what decision the work serves before you touch the data. It has six phases in total and it is the ancestor of nearly every process diagram you will see in this field.</p>
+        <p>Whether it is still the most used process model is a weaker claim than it is usually given. The evidence for the "most used" line rests mostly on two self-selected online polls with a couple of hundred respondents between them; there is a stronger academic literature review showing it dominates among published workflow adaptations specifically, which is a narrower statement. Microsoft's own analytics guidance gives a similar instruction in fewer words, telling you to ask a sharp question, meaning one whose answer is a name, a number or a yes.</p>
+        <p>None of this is measured. No study shows that teams filling four slots produce better analyses than teams who do not, and nobody appears to have tried. What can be said honestly is that the failure mode is real, common and expensive, and that every process model in the field independently puts a version of this step first.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="part-2">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers reading a claim</span>
+      <h2>A worked example: the claim everybody repeats about this job</h2>
+      <span class="tag concept">6 min live</span>
+    </div>
+    <p class="lede">You will have heard that data scientists spend eighty percent of their time cleaning data. It is in conference talks, vendor pages and probably in the deck that got your team its budget. It is a useful thing to take apart on the first night, because the taking-apart is the entire skill being built here, and because the answer is more interesting than either "true" or "false".</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A four-link citation chain from a product page back through two blog posts to a 2016 survey, beside a table of what each survey year actually reported, none of which is eighty percent">
+        <style>
+          .d1bH { font: 800 11.5px Inter, sans-serif; fill: #2A4030; }
+          .d1bT { font: 700 11px Inter, sans-serif; fill: #FFFFFF; }
+          .d1bB { font: 400 11px Inter, sans-serif; fill: #1F2A22; }
+          .d1bN { font: 400 11px Inter, sans-serif; fill: #61705F; }
+          .d1bR { font: 800 11px Inter, sans-serif; fill: #991B1B; }
+          .d1bE { fill: none; stroke: #B0562C; stroke-width: 1.8; }
+        </style>
+        <defs>
+          <marker id="d1b-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0 0 L10 5 L0 10 z" fill="#B0562C"/>
+          </marker>
+        </defs>
+
+        <text class="d1bH" x="30" y="26">FOLLOW THE CITATION BACKWARDS</text>
+
+        <rect x="30" y="42" width="186" height="42" rx="8" fill="#2A4030"/>
+        <text class="d1bT" x="44" y="60">A product page</text>
+        <text class="d1bB" x="44" y="76" fill="#EDF3EE">"80% of the time"</text>
+        <path class="d1bE" d="M222 63 L246 63" marker-end="url(#d1b-arr)"/>
+        <rect x="252" y="42" width="186" height="42" rx="8" fill="#3F5D45"/>
+        <text class="d1bT" x="266" y="60">A 2018 blog post</text>
+        <text class="d1bB" x="266" y="76" fill="#EDF3EE">cites the one below</text>
+        <path class="d1bE" d="M444 63 L468 63" marker-end="url(#d1b-arr)"/>
+        <rect x="474" y="42" width="186" height="42" rx="8" fill="#5A7D62"/>
+        <text class="d1bT" x="488" y="60">A 2017 blog post</text>
+        <text class="d1bB" x="488" y="76" fill="#EDF3EE">cites the one below</text>
+        <path class="d1bE" d="M666 63 L690 63" marker-end="url(#d1b-arr)"/>
+        <rect x="696" y="42" width="154" height="42" rx="8" fill="#B0562C"/>
+        <text class="d1bT" x="710" y="60">A 2016 survey</text>
+        <text class="d1bB" x="710" y="76" fill="#F7E7DE">the actual source</text>
+
+        <text class="d1bN" x="30" y="106">nobody in the chain re-measured anything; each link quotes the last</text>
+
+        <line x1="30" y1="122" x2="850" y2="122" stroke="#E0E8E1"/>
+        <text class="d1bH" x="30" y="148">WHAT THE SURVEYS ACTUALLY SAID</text>
+
+        <text class="d1bB" x="30" y="176">2015</text>
+        <text class="d1bB" x="120" y="176">66.7% called cleaning one of their most time-consuming tasks</text>
+        <text class="d1bN" x="640" y="176">no time percentage given</text>
+
+        <rect x="20" y="188" width="840" height="46" rx="8" fill="#F7E7DE"/>
+        <text class="d1bB" x="30" y="206">2016</text>
+        <text class="d1bB" x="120" y="206">cleaning and organising 60%, collecting data sets 19%</text>
+        <text class="d1bR" x="640" y="206">80% only if you add two</text>
+        <text class="d1bN" x="120" y="224">these were answers to "what do you spend the most time doing", not shares of a day</text>
+        <text class="d1bR" x="640" y="224">different tasks together</text>
+
+        <text class="d1bB" x="30" y="256">2017</text>
+        <text class="d1bB" x="120" y="256">51% for collecting, labelling, cleaning and organising combined</text>
+        <text class="d1bN" x="640" y="256">one combined activity</text>
+
+        <text class="d1bB" x="30" y="284">2019</text>
+        <text class="d1bB" x="120" y="284">73.5% spend at least 25% of their time on data work</text>
+        <text class="d1bN" x="640" y="284">a different measure entirely</text>
+
+        <text class="d1bB" x="30" y="312">Kaggle 2018</text>
+        <text class="d1bB" x="120" y="312">about 11% gathering and 15% cleaning, so roughly 26% combined</text>
+        <text class="d1bN" x="640" y="312">an independent survey</text>
+
+        <line x1="30" y1="330" x2="850" y2="330" stroke="#E0E8E1"/>
+        <text class="d1bB" x="30" y="356">Not one of these is a measurement of how anybody actually spent their time. They are all self-report, and they disagree.</text>
+
+        <rect x="30" y="374" width="14" height="14" rx="3" fill="#B0562C"/>
+        <text class="d1bN" x="52" y="385">The number is not invented. It is two tasks added together in one year of one survey, then copied for a decade.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - "is it true?" is the wrong question; "what was actually measured, by whom, and how" is the right one</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What the archaeology shows, and what to take from it<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Somebody followed the citations properly. A product marketing page cited a 2018 blog post, which cited a 2017 blog post, which cited a 2016 industry survey. Four links, and nobody along the way measured anything new.</p>
+        <p>At the end of the chain, the 2016 survey asked people what they spend the most time doing and reported cleaning and organising at 60 percent and collecting data sets at 19 percent. Eighty percent appears only if you add those two together, which is not how the survey framed them. Every other year gives a different figure, and an independent survey run by a different organisation put the combined total nearer a quarter. The oldest version of the claim, from a 2014 newspaper article, gives a range of fifty to eighty percent sourced to interviews.</p>
+        <p>So the honest summary is this: <strong>data preparation is a large part of the job, every source agrees on that, and there is no measurement anywhere of what fraction of a day it takes.</strong> That sentence is both truer and more useful than the number. It also survives contact with someone who has the survey open in front of them, which the number does not.</p>
+        <p>One caution about my own sources here, in the spirit of the session: the archaeology above comes from a named practitioner's write-up and a reposted press release. The original 2016 survey PDF would not load on any attempt, so nobody in this chain, including this page, has read the primary document. That is the honest tier, and it is stated rather than hidden.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Three questions that take apart any statistic<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>Who measured this, and how?</strong> Self-report and observation are different things, and a survey asking "what takes you the longest" is not a time-use study. Most circulating statistics about work are the former dressed as the latter.</p>
+        <p><strong>What exactly was the denominator?</strong> Percentage of what: of people, of time, of projects, of respondents who answered a particular way? The 2019 figure in the table is a proportion of respondents, and the 2016 one is a proportion of respondents naming a task. Neither is a share of a working day, and both get quoted as though they were.</p>
+        <p><strong>How many links back is the original?</strong> If a claim has a source, check whether that source has a source. Two hops is usually enough to find either a real study or a dead end, and finding the dead end takes about five minutes.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p>Every organisation has a number like this: a conversion rate, a churn figure, a cost per acquisition that everybody quotes and nobody can source. Finding the origin of one of them is a genuinely useful first week in a new job, and it is the same exercise as the one above.</p>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="part-3">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers the three askers</span>
+      <h2>Three people, one promotion, three questions</h2>
+      <span class="tag concept">4 min live</span>
+    </div>
+    <p class="lede">Back to Daybreak. Three people ask about the same promotion in almost the same words, and filling the four slots separates them immediately. Two of the three questions can be answered with the data that exists. One cannot, and knowing which is which on day one is worth more than any calculation.</p>
+
+    <table class="clean">
+      <tr><th>Who asks</th><th>Outcome</th><th>Population</th><th>Timeframe</th><th>Decision</th><th>Answerable?</th></tr>
+      <tr><td>Head of marketing</td><td>Conversion rate</td><td>All orders</td><td>12 weeks after against 12 before</td><td>Repeat the offer in spring</td><td><strong>Yes</strong></td></tr>
+      <tr><td>Finance</td><td>Revenue per order</td><td>Converted orders</td><td>Same 12 and 12</td><td>Set next quarter's margin target</td><td><strong>Yes, with care</strong></td></tr>
+      <tr><td>The founder</td><td>Whether they stay</td><td>Customers acquired during the offer</td><td>At least one renewal cycle later</td><td>Whether this is a growth channel</td><td><strong>No - the data stops too early</strong></td></tr>
+    </table>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The founder's question is the important one and the one that has no answer<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Notice what happened when the four slots were filled in. Everybody said "did the promotion work". Only when you write the timeframe down does it become obvious that the founder is asking about a period the data does not cover, because the rows stop twelve weeks after the offer and a renewal cycle has not happened yet.</p>
+        <p>That is not a failure. It is the single most valuable thing you can produce on day one, because it arrives before anybody spends a week on it, and because it converts into a concrete request: extend the collection window, or wait, or accept that this question gets answered in the spring rather than now. Session 2 turns that into a written gap list.</p>
+        <p>The failure mode is answering a nearby question instead. The founder asks about retention, the data supports activation, so the deck reports activation and the sentence "the promotion worked" is said out loud. Nobody lied. Nobody checked. The organisation now believes something it has no evidence for, and it will plan the spring around it.</p>
+      </div>
+    </details>
+
+    <div class="tryrow" data-fn="wordcount" data-multiline="1" data-title="Fill the four slots for a request you were sent" data-hint="Outcome, population, timeframe, decision. One line each. If you cannot fill one from the message you were sent, that is the sentence you need to send back, and it is usually one line long." data-seed="" data-cta="Count it"></div>
+  </section>
+
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Build-along</span>
+      <h2>Rewrite three real requests</h2>
+      <span class="tag demo">★ 22 min · your own inbox</span>
+    </div>
+    <p class="lede">Three requests somebody actually sent you. Not hypotheticals, because hypotheticals are already well specified and that is what makes them useless here.</p>
+
+    <div class="tick" data-stages="Find three|Fill what you can|Mark the gaps|Write the reply|Ask the fourth slot" data-title="Five passes, about four minutes each" data-foot="The output is three rewritten questions and at least one message you can actually send today. If none of the three needs a reply, they were unusually well specified and you should pick harder examples.">
+      <p class="tick-note" data-stage="0"><b>Find three.</b> Search your messages for "can you look", "do we know", "how many", "is it working". Take the three most recent, whatever they are about.</p>
+      <p class="tick-note" data-stage="1"><b>Fill what you can.</b> For each, write the four slots using only what is actually in the message. Resist completing them from memory or common sense; the point is to see what was genuinely specified.</p>
+      <p class="tick-note" data-stage="2"><b>Mark the gaps.</b> Circle every slot you filled with a guess. Most requests specify one or two slots out of four, and the outcome slot is the one most often assumed rather than stated.</p>
+      <p class="tick-note" data-stage="3"><b>Write the reply.</b> One line per gap, phrased as a proposal rather than a question: "I will read this as conversion among new subscribers, twelve weeks either side - tell me if you meant something else." People correct a proposal instantly and stall on an open question.</p>
+      <p class="tick-note" data-stage="4"><b>Ask the fourth slot</b> explicitly on at least one of them: what will you do differently depending on what I find? Note the answer, because it decides how much of your week this deserves.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step"><p><strong>Propose, do not interrogate.</strong> "What exactly do you mean by worked?" puts the work back on them and they will repeat themselves. "I will read this as X" gets corrected in seconds.</p></div>
+      <div class="step"><p><strong>Write the timeframe as two windows</strong>, not one. "After the promotion" is not a timeframe until you say what it is being compared with, and that comparison is where session 4's trouble starts.</p></div>
+      <div class="step"><p><strong>Name the population in rows</strong>, not in words. "New customers" is a word; "orders where the customer had no previous order" is a row filter, and the gap between those two is where a week gets lost.</p></div>
+      <div class="step"><p><strong>If the decision slot comes back empty</strong>, that is still an answer. Spend twenty minutes, send a number, move on.</p></div>
+      <div class="step"><p><strong>Keep the three rewritten questions.</strong> Session 2 turns them into lists of what you would need, and session 4 answers one of them properly.</p></div>
+      <div class="step"><p><strong>Send at least one reply tonight.</strong> The habit is the thing being built here, and it only becomes a habit if it survives contact with a real colleague.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <p><strong>If you take one thing from tonight.</strong> An unfilled slot never stays empty. You fill it with a guess, silently, in the first five minutes, and nobody discovers which guess you made until the work is presented. Saying the guess out loud at the start costs one sentence and is the cheapest thing in this entire course.</p>
+    </div>
+  </section>
+
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Before session 2</h2>
+      <span class="tag exercise">25 min</span>
+    </div>
+    <ol>
+      <li><strong>Send the replies</strong> for all three requests and note what came back. The corrections are the data: people will correct the outcome slot far more often than the other three, which tells you where the ambiguity actually lives.</li>
+      <li><strong>Trace one number your organisation quotes.</strong> Pick something everybody repeats and find where it came from. Two hops usually reaches either a real source or a dead end, and both are worth knowing.</li>
+      <li><strong>Find one request you answered in the last month</strong> where you now think you guessed a slot wrong. Write what you assumed and what they probably meant. Nobody has zero of these.</li>
+      <li><strong>Bring the three rewritten questions to session 2</strong>, which asks what you would need to know to answer each one, before looking at what you actually have.</li>
+    </ol>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions</h2>
+    </div>
+    <p>Clear all three and session 1 gets stamped in your passport.</p>
+
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · Somebody sends you "can you see if the new onboarding is working?" What is the most useful first reply?</p>
+      <button class="qopt" type="button">A · "What do you mean by working?"</button>
+      <button class="qopt" type="button">B · A proposal filling the slots they left empty: "I will read this as completion rate for accounts created since the change, against the eight weeks before - and what will you do differently depending on the answer?"</button>
+      <button class="qopt" type="button">C · Pull the data first, then ask once you can see what is available</button>
+      <button class="qopt" type="button">D · Ask them to write a formal specification</button>
+      <p class="qwhy">An open question puts the work back on somebody who has already told you everything they can articulate, and you will get the same sentence again. A proposal gets corrected in seconds because people cannot specify a question but can always spot a wrong one. The decision slot rides along in the same message.</p>
+    </div>
+
+    <div class="quiz-q" data-answer="3">
+      <p class="qtext">2 · The "80% of time cleaning data" claim. What is the accurate thing to say about it?</p>
+      <button class="qopt" type="button">A · It is a myth with no basis</button>
+      <button class="qopt" type="button">B · It is well established by repeated measurement</button>
+      <button class="qopt" type="button">C · It is true but only for junior analysts</button>
+      <button class="qopt" type="button">D · It traces four citations back to one 2016 survey where cleaning was 60% and collecting 19%, so 80% only appears if you add two separate answers; every other year and an independent survey give different and lower figures, and none of them measured time use at all</button>
+      <p class="qwhy">The interesting answer is neither true nor false. Data preparation being a large part of the job is agreed by every source; the specific number is two tasks added together in one year, then copied down a chain in which nobody re-measured. Saying the honest version survives contact with somebody holding the survey.</p>
+    </div>
+
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">3 · Filling the slots reveals that the founder's question needs data from a period the rows do not cover. What do you do?</p>
+      <button class="qopt" type="button">A · Answer a nearby question the data does support and note the caveat at the end</button>
+      <button class="qopt" type="button">B · Split the existing data more finely until something usable appears</button>
+      <button class="qopt" type="button">C · Say so the same day, and say what would answer it: a follow-up window covering at least one renewal cycle, joined to the same customers</button>
+      <button class="qopt" type="button">D · Estimate it from the metrics that are available</button>
+      <p class="qwhy">Discovering a question is unanswerable on day one is the most valuable output available, because it arrives before a week is spent and converts into a concrete request. Answering the nearby question instead is how an organisation ends up believing something nobody ever demonstrated.</p>
+    </div>
+
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Sources covered</span>
+      <h2>What this session teaches, and where it came from</h2>
+    </div>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The Heilmeier Catechism</span><span class="note">All eight questions read from DARPA's own page; cross-checked line by line against a raw fetch</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">CRISP-DM's six phases and 2000 origin</span><span class="note">Read from the primary consortium document</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The citation chain behind the 80% claim</span><span class="note">Four links, traced by a named practitioner who followed and linked each one; the year-by-year survey figures come from that write-up and a reposted press release</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">The original 2016 survey document</span><span class="note">Never loaded on any attempt, so no one in this chain has read the primary; stated on the page rather than hidden</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">"CRISP-DM is still the most used"</span><span class="note">Rests on two small self-selected polls plus one literature review covering published adaptations; the narrower claim is the defensible one</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">The four slots themselves</span><span class="note">Practitioner craft. No study shows teams that do this produce better analyses; every process model in the field puts a version of it first</span></div>
+    </div>
+    <p class="mono" style="margin-top:14px">Every fact on this page, and its verification tier, is recorded in the course's source map.</p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Session 1 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Four slots</b><span>Outcome, population, timeframe, decision.</span></div>
+      <div class="cheat-item"><b>Propose, do not ask</b><span>"I will read this as X" gets corrected. "What do you mean" gets repeated.</span></div>
+      <div class="cheat-item"><b>The fourth slot</b><span>What changes depending on the answer? It sets the budget.</span></div>
+      <div class="cheat-item"><b>Empty is never empty</b><span>You filled it with a guess in the first five minutes.</span></div>
+      <div class="cheat-item"><b>Two hops back</b><span>Does the source have a source? Five minutes finds the dead end.</span></div>
+      <div class="cheat-item"><b>Unanswerable is an answer</b><span>Say it day one, and say what would answer it.</span></div>
+    </div>
+  </section>
+
+  <div class="callout next">
+    <span class="nx-pill">Next session</span>
+    <p>You have three questions with their slots filled and probably one that cannot be answered yet. Session 2 does the step that has to come next and almost never does: working out what data would answer each question, in the ideal, before looking at what actually exists. Doing it the other way round quietly rewrites the question into whatever the spreadsheet happens to support.</p>
+  </div>
+
+  <footer class="pagefoot">
+    <span>Session 1 of 6 · learn-data-thinking-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← Course home</a> &nbsp;·&nbsp; <a href="02-what-you-would-need-to-know.html">Next: What you would need to know →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

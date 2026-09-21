@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- social:start -->
+<meta name="description" content="Session 6 of 6. Most numbers you act on were produced by somebody else. Six questions that find the weak spot in any chart or deck, in the order worth asking them, and a final scorecard on a real analysis.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Learn with Phoebe">
+<meta property="og:title" content="Reading somebody else's analysis - learn data thinking with phoebe">
+<meta property="og:description" content="Session 6 of 6. Compared with what? Who is missing? Did the mix change? Six questions, asked politely, that find almost everything.">
+<meta property="og:url" content="https://phoebefu6.github.io/learn-data-thinking-with-phoebe/courses/06-reading-somebody-elses-analysis.html">
+<meta property="og:image" content="https://phoebefu6.github.io/learn-data-thinking-with-phoebe/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Reading somebody else's analysis - learn data thinking with phoebe">
+<meta name="twitter:description" content="Session 6 of 6. Six questions that find the weak spot, and the final scorecard.">
+<meta name="twitter:image" content="https://phoebefu6.github.io/learn-data-thinking-with-phoebe/assets/og-cover.png">
+<!-- social:end -->
+<title>Session 6 · Reading somebody else's analysis - learn data thinking with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-data-thinking-with-phoebe</a> / Session 6 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn Data Thinking with Phoebe · Session 6 of 6</div>
+    <h1>Reading somebody <span class="accent">else's analysis</span></h1>
+    <p class="sub">Almost every number you act on was produced by somebody else, in a hurry, for a slightly different question than the one you have. You will not get to see their rows, you will usually not get to see their method, and you have about ninety seconds in a meeting. Six questions do most of the work, they are all askable without sounding like an interrogation, and the order matters because the early ones find the biggest problems. Then a final scorecard on a real analysis, and where to go next.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Medium</span>
+      <span class="chip audience">Bring a chart or a slide somebody made</span>
+      <span class="chip audience">No maths, no code</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-18 · The six questions, in order</span>
+      <span class="a3" style="flex:5">18-40 · Build-along: read one, then score it</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where we start</h2>
+    </div>
+    <p class="lede">Five sessions of doing the work carefully. Tonight is the other ninety percent of a working life, which is receiving work somebody else did and deciding whether to believe it. The good news is that you already know what to ask, because every question below is one of the earlier sessions turned around and pointed at somebody else's output.</p>
+
+    <div class="legend">
+      <span class="pill">🎫 Clear all three quiz questions to stamp your passport</span>
+      <span class="pill">Live = presented in the 45 minutes</span>
+      <span class="pill">Self-study = the full depth, after class</span>
+    </div>
+
+    <div class="callout win">
+      <p><strong>★ What you walk out with tonight.</strong> Six questions you can ask out loud without being the difficult person in the room, one real analysis read properly, and a final scorecard on everything the course has claimed.</p>
+    </div>
+
+    <div class="callout tip">
+      <p><strong>Where to go next.</strong> If the answer to "is this difference real or noise" starts mattering, that is <span class="mono">learn-statistics-with-phoebe</span>. If you need to design the comparison rather than inherit it, <span class="mono">learn-experimentation-with-phoebe</span>. If the chart itself is the problem, <span class="mono">learn-dataviz-with-phoebe</span>. And when a question genuinely needs a model, <span class="mono">learn-intro-ml-with-phoebe</span> is the next rung.</p>
+    </div>
+  </section>
+
+  <section class="section" id="part-1">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers the six questions</span>
+      <h2>Six questions, in the order that finds things fastest</h2>
+      <span class="tag concept">7 min live</span>
+    </div>
+    <p class="lede">Ordered by how much they typically find per second spent. The first three are almost always worth asking; the last three are for when the decision is expensive.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Six questions listed in order with what each one catches: compared with what, who is missing, did the mix change, what is the denominator, how many links back is the source, and what would change your mind">
+        <style>
+          .d6aH { font: 800 12px Inter, sans-serif; fill: #2A4030; }
+          .d6aT { font: 800 11.5px Inter, sans-serif; fill: #FFFFFF; }
+          .d6aW { font: 400 11px Inter, sans-serif; fill: #EDF3EE; }
+          .d6aN { font: 400 11px Inter, sans-serif; fill: #61705F; }
+          .d6aS { font: 700 10px Inter, sans-serif; fill: #7C3A1C; }
+        </style>
+
+        <text class="d6aH" x="30" y="26">ASK IN THIS ORDER</text>
+        <text class="d6aN" x="30" y="44">the first three cost nothing and find most of it</text>
+
+        <rect x="30" y="58" width="560" height="46" rx="9" fill="#2A4030"/>
+        <text class="d6aT" x="46" y="78">1 · Compared with what?</text>
+        <text class="d6aW" x="46" y="95">a number with no comparison cannot be good or bad</text>
+        <text class="d6aS" x="606" y="86">from session 1</text>
+
+        <rect x="30" y="112" width="560" height="46" rx="9" fill="#3F5D45"/>
+        <text class="d6aT" x="46" y="132">2 · Who is missing from this?</text>
+        <text class="d6aW" x="46" y="149">the rows that dropped out are never in the chart</text>
+        <text class="d6aS" x="606" y="140">from session 3</text>
+
+        <rect x="30" y="166" width="560" height="46" rx="9" fill="#B0562C"/>
+        <text class="d6aT" x="46" y="186">3 · Did the mix change?</text>
+        <text class="d6aW" x="46" y="203">the four words that found the reversal in session 4</text>
+        <text class="d6aS" x="606" y="194">from session 4</text>
+
+        <rect x="30" y="220" width="560" height="46" rx="9" fill="#5A7D62"/>
+        <text class="d6aT" x="46" y="240">4 · What is the denominator?</text>
+        <text class="d6aW" x="46" y="257">per customer, per order, per chance to happen</text>
+        <text class="d6aS" x="606" y="248">from session 5</text>
+
+        <rect x="30" y="274" width="560" height="46" rx="9" fill="#5A7D62"/>
+        <text class="d6aT" x="46" y="294">5 · How many links back is the source?</text>
+        <text class="d6aW" x="46" y="311">two hops usually reaches a study or a dead end</text>
+        <text class="d6aS" x="606" y="302">from session 1</text>
+
+        <rect x="30" y="328" width="560" height="46" rx="9" fill="#C3D6C7"/>
+        <text class="d6aH" x="46" y="348">6 · What would change your mind?</text>
+        <text class="d6aN" x="46" y="365">asked of the author, and worth asking of yourself</text>
+        <text class="d6aS" x="606" y="356">the closing one</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - every one of these is an earlier session turned around and pointed at somebody else's work</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The first three, and what each one catches<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>Compared with what?</strong> A conversion rate of 4 percent is neither good nor bad until you know what it is being held against: last quarter, the other channel, the target, the industry. Numbers presented without a comparison are asking you to supply one from memory, and you will supply a flattering one.</p>
+        <p><strong>Who is missing from this?</strong> Charts are made from rows that survived. Customers who churned before the survey, orders that errored out, the branch whose data feed broke in March. The rows that dropped out never appear, and their absence looks exactly like them not existing. This is the question that catches the analysis where a whole group silently left.</p>
+        <p><strong>Did the mix change?</strong> Four words, ten seconds, and the single highest-yield question in the set. If the composition of the population shifted between the two periods being compared, the headline is a blend of two things moving at once, and it can point the opposite way to every one of its parts. Session 4 showed exactly that: a headline up thirteen pence while email orders fell by GBP 3.83 and social orders by GBP 2.97.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>How to ask without becoming the difficult person<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>All six questions can be asked in a way that sounds like interest or like an accusation, and the difference is almost entirely whether you attach a reason. "Did the mix change?" alone sounds like a challenge. "Did the mix change - I ask because we shifted spend to social in that window and it would pull the average up on its own" sounds like somebody helping.</p>
+        <p>Two more habits that keep it collegial. Ask about the work rather than the person: "what does this compare against" rather than "why didn't you compare it". And ask your own numbers the same questions in public, visibly, so that the six questions read as house style rather than as something that happens to other people's work.</p>
+        <p>The one exception is when the decision is large and irreversible. Then the questions get asked properly, in writing, and the politeness budget goes on tone rather than on skipping any of them.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="part-2">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers stories about numbers</span>
+      <h2>The story around a number travels further than the number</h2>
+      <span class="tag concept">4 min live</span>
+    </div>
+    <p class="lede">Two examples from inside these six sessions, because the failure being described is one these pages could have committed and nearly did.</p>
+
+    <table class="clean">
+      <tr><th>The version that circulates</th><th>What is actually the case</th><th>What went wrong</th></tr>
+      <tr><td>Data scientists spend 80% of their time cleaning data</td><td>One 2016 survey reported cleaning at 60% and collecting at 19%; the 80% appears only by adding two different answers. Other years and an independent survey give quite different, lower figures, and none measured time use</td><td>Four citations deep, nobody re-measured, two tasks merged into one number</td></tr>
+      <tr><td>Berkeley was sued for sex bias in admissions, and the lawsuit collapsed when the data was broken down</td><td>The admissions figures and the reversal are real. The lawsuit appears not to be: the graduate division feared being sued and commissioned the analysis. No suit was filed</td><td>A memorable story attached itself to a real result and has been repeated in at least six textbooks and papers</td></tr>
+    </table>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Why the second one is the more useful lesson<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The Berkeley numbers are correct and the conclusion drawn from them is correct. What is wrong is the narrative wrapped around them, and the narrative is the part everybody remembers and repeats. That is worth sitting with: the single most-cited example of a misleading aggregate is itself surrounded by a claim that nobody checked, in textbooks, for decades.</p>
+        <p>It is also worth noticing what the careful version of the finding actually was. The authors did not conclude "no bias". They found four departments significantly biased against women and six significantly biased against men, and their pooled figure showed a small but statistically significant bias in favour of women. Nearly every retelling flattens that into something cleaner than what the paper said, in the same way that the 80 percent claim flattens two survey answers into one number.</p>
+        <p>The pattern is the same in both cases and it is the thing to watch for: <strong>the tidy version travels and the careful version does not.</strong> When you hear a number with a good story attached, the story is the part most likely to be wrong.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The tiers these sessions used on themselves<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Every factual claim across these six sessions carries a tier. Read directly from the primary source, read from a reliable secondary that quotes the primary, or seen only in a search result. The Berkeley figures above are the middle tier: the 1975 paper itself would not load on any attempt during this build, so the numbers come from three independent sources that reproduce its tables and agree with each other to the digit. That is good enough to teach from and not good enough to call first-hand, and the difference is stated rather than smoothed over.</p>
+        <p>You can do the same thing in your own work at almost no cost. When you quote a figure, write next to it where you got it and whether you saw the original. Three months later, when somebody challenges it, that one line is the difference between defending your number and discovering you cannot.</p>
+      </div>
+    </details>
+
+    <div class="tryrow" data-fn="wordcount" data-multiline="1" data-title="Ask the six of something in front of you" data-hint="Take a chart or claim you have to hand and write one line per question. The one you cannot answer from what is in front of you is the question to ask out loud." data-seed="" data-cta="Count it"></div>
+  </section>
+
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Build-along</span>
+      <h2>Read one, then score the course</h2>
+      <span class="tag demo">★ 22 min · a real analysis</span>
+    </div>
+    <p class="lede">The chart or slide you brought. Twelve minutes reading it properly, then ten on the scorecard.</p>
+
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The six sessions across the top and the question each one leaves you with underneath: compared with what, what data would answer this, who is missing, did the mix change, what is the denominator, and what would change your mind">
+        <style>
+          .d6bH { font: 800 12px Inter, sans-serif; fill: #2A4030; }
+          .d6bS { font: 400 11px Inter, sans-serif; fill: #61705F; }
+          .d6bD { font: 700 10.5px Inter, sans-serif; fill: #2A4030; }
+          .d6bQ { font: 800 10.5px Inter, sans-serif; fill: #FFFFFF; }
+          .d6bN { font: 800 11px Inter, sans-serif; fill: #FFFFFF; }
+        </style>
+        <text class="d6bH" x="30" y="28">WHAT YOU DID</text>
+        <text class="d6bS" x="30" y="46">and the question each session leaves in your hands</text>
+        <rect x="30" y="64" width="133" height="76" rx="9" fill="#EDF3EE" stroke="#C3D6C7"/>
+        <circle cx="48" cy="82" r="11" fill="#3F5D45"/>
+        <text class="d6bN" x="48" y="86" text-anchor="middle">1</text>
+        <text class="d6bD" x="96.5" y="112" text-anchor="middle">Sharpen the</text>
+        <text class="d6bD" x="96.5" y="127" text-anchor="middle">question</text>
+        <path d="M 96.5 146 L 96.5 160" stroke="#C3D6C7" stroke-width="2"/>
+        <rect x="30" y="164" width="133" height="70" rx="9" fill="#3F5D45"/>
+        <text class="d6bQ" x="96.5" y="196" text-anchor="middle">Compared with</text>
+        <text class="d6bQ" x="96.5" y="212" text-anchor="middle">what?</text>
+        <rect x="168" y="64" width="133" height="76" rx="9" fill="#EDF3EE" stroke="#C3D6C7"/>
+        <circle cx="186" cy="82" r="11" fill="#3F5D45"/>
+        <text class="d6bN" x="186" y="86" text-anchor="middle">2</text>
+        <text class="d6bD" x="234.5" y="112" text-anchor="middle">Say what would</text>
+        <text class="d6bD" x="234.5" y="127" text-anchor="middle">answer it</text>
+        <path d="M 234.5 146 L 234.5 160" stroke="#C3D6C7" stroke-width="2"/>
+        <rect x="168" y="164" width="133" height="70" rx="9" fill="#3F5D45"/>
+        <text class="d6bQ" x="234.5" y="196" text-anchor="middle">What data would</text>
+        <text class="d6bQ" x="234.5" y="212" text-anchor="middle">answer this?</text>
+        <rect x="306" y="64" width="133" height="76" rx="9" fill="#EDF3EE" stroke="#C3D6C7"/>
+        <circle cx="324" cy="82" r="11" fill="#3F5D45"/>
+        <text class="d6bN" x="324" y="86" text-anchor="middle">3</text>
+        <text class="d6bD" x="372.5" y="112" text-anchor="middle">Look before</text>
+        <text class="d6bD" x="372.5" y="127" text-anchor="middle">you model</text>
+        <path d="M 372.5 146 L 372.5 160" stroke="#C3D6C7" stroke-width="2"/>
+        <rect x="306" y="164" width="133" height="70" rx="9" fill="#3F5D45"/>
+        <text class="d6bQ" x="372.5" y="196" text-anchor="middle">Who is missing</text>
+        <text class="d6bQ" x="372.5" y="212" text-anchor="middle">from this?</text>
+        <rect x="444" y="64" width="133" height="76" rx="9" fill="#EDF3EE" stroke="#C3D6C7"/>
+        <circle cx="462" cy="82" r="11" fill="#3F5D45"/>
+        <text class="d6bN" x="462" y="86" text-anchor="middle">4</text>
+        <text class="d6bD" x="510.5" y="112" text-anchor="middle">Check at more</text>
+        <text class="d6bD" x="510.5" y="127" text-anchor="middle">than one level</text>
+        <path d="M 510.5 146 L 510.5 160" stroke="#C3D6C7" stroke-width="2"/>
+        <rect x="444" y="164" width="133" height="70" rx="9" fill="#3F5D45"/>
+        <text class="d6bQ" x="510.5" y="196" text-anchor="middle">Did the mix</text>
+        <text class="d6bQ" x="510.5" y="212" text-anchor="middle">change?</text>
+        <rect x="582" y="64" width="133" height="76" rx="9" fill="#EDF3EE" stroke="#C3D6C7"/>
+        <circle cx="600" cy="82" r="11" fill="#3F5D45"/>
+        <text class="d6bN" x="600" y="86" text-anchor="middle">5</text>
+        <text class="d6bD" x="648.5" y="112" text-anchor="middle">Stop at the</text>
+        <text class="d6bD" x="648.5" y="127" text-anchor="middle">right rung</text>
+        <path d="M 648.5 146 L 648.5 160" stroke="#C3D6C7" stroke-width="2"/>
+        <rect x="582" y="164" width="133" height="70" rx="9" fill="#3F5D45"/>
+        <text class="d6bQ" x="648.5" y="196" text-anchor="middle">What is the</text>
+        <text class="d6bQ" x="648.5" y="212" text-anchor="middle">denominator?</text>
+        <rect x="720" y="64" width="133" height="76" rx="9" fill="#EDF3EE" stroke="#C3D6C7"/>
+        <circle cx="738" cy="82" r="11" fill="#B0562C"/>
+        <text class="d6bN" x="738" y="86" text-anchor="middle">6</text>
+        <text class="d6bD" x="786.5" y="112" text-anchor="middle">Read somebody</text>
+        <text class="d6bD" x="786.5" y="127" text-anchor="middle">else's work</text>
+        <path d="M 786.5 146 L 786.5 160" stroke="#C3D6C7" stroke-width="2"/>
+        <rect x="720" y="164" width="133" height="70" rx="9" fill="#B0562C"/>
+        <text class="d6bQ" x="786.5" y="196" text-anchor="middle">What would change</text>
+        <text class="d6bQ" x="786.5" y="212" text-anchor="middle">your mind?</text>
+        <text class="d6bS" x="30" y="262">Six sessions, six questions. The bottom row is the course; the top row is how you earned the right to ask it.</text>
+        <text class="d6bS" x="30" y="280">Nothing on this page needs a model, a p-value or a line of code.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the bottom row is what you carry into every meeting from here</figcaption>
+    </figure>
+
+    <div class="tick" data-stages="State the claim|Ask the first three|Ask the last three|Write the one question|Score the card" data-title="Five passes, one real analysis" data-foot="The output is one question you will actually ask the person who made it. If you finish with none, either the analysis was unusually well made or you have not asked the six properly.">
+      <p class="tick-note" data-stage="0"><b>State the claim in one sentence</b>, in your own words, as an outcome and a direction. If you cannot, that is already the finding: the analysis has not told you what it thinks is true.</p>
+      <p class="tick-note" data-stage="1"><b>Ask the first three</b> of the chart rather than the person: what is this compared with, who could have dropped out before this was drawn, and did the composition change between the periods shown. Write what you can answer from the page alone.</p>
+      <p class="tick-note" data-stage="2"><b>Ask the last three.</b> What is the denominator and is it the right one; how many links back is the source; and what result would have changed the author's conclusion.</p>
+      <p class="tick-note" data-stage="3"><b>Write the one question</b> you will actually ask, with its reason attached. One is the right number: it gets answered, whereas six at once gets defended.</p>
+      <p class="tick-note" data-stage="4"><b>Score the card below</b> honestly, including the rows you know you skipped.</p>
+    </div>
+
+    <div class="callout tip">
+      <p><strong>If you take one thing from the whole course.</strong> Most wrong answers are answers to the wrong question, and most of the rest are answers nobody checked twice. Both failures are cheap to prevent and expensive to discover later, and neither needs any mathematics.</p>
+    </div>
+
+    <div class="scorecard" data-title="Final scorecard: one real question, end to end" data-foot="Six sessions. This grades one real piece of work against everything the earlier sessions claimed. 0 not yet, 1 partly, 2 solid.">
+      <div class="sc-row"><div class="sc-q">The question has an outcome, a population, a timeframe and a decision attached, and you proposed them rather than asking what was meant
+        <em>From session 1. An empty slot gets filled with a silent guess in the first five minutes.</em></div></div>
+      <div class="sc-row"><div class="sc-q">You wrote what data would answer it before opening what exists, and named each gap with the person who could close it
+        <em>From session 2. Opening the file first rewrites the question into whatever the file supports.</em></div></div>
+      <div class="sc-row"><div class="sc-q">Twenty minutes went on looking: row count, what one row is, blanks, duplicates, impossible values, and one surprise
+        <em>From session 3. The problems that break every later number are visible here and nowhere else.</em></div></div>
+      <div class="sc-row"><div class="sc-q">The headline was checked at more than one level, and you know whether it held or reversed
+        <em>From session 4. Did the mix change is four words and the highest-yield question you own.</em></div></div>
+      <div class="sc-row"><div class="sc-q">You climbed only as far up the ladder as the question required, and the answer is checkable by the person who asked
+        <em>From session 5. Precision that changes no decision is decoration.</em></div></div>
+      <div class="sc-row"><div class="sc-q">Tonight: you asked the six questions of somebody else's work, and of your own, and wrote down where each number came from
+        <em>From session 6. The tidy version travels; the careful version has to be written down.</em></div></div>
+    </div>
+  </section>
+
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>After the course</h2>
+      <span class="tag exercise">25 min</span>
+    </div>
+    <ol>
+      <li><strong>Ask your one question</strong> and note what comes back. The answer is often "I do not know", which is not a failure of the analysis; it is the beginning of the next one.</li>
+      <li><strong>Put the six questions somewhere you will see them</strong> before your next review meeting. They take ninety seconds and they are the whole of the six sessions in a form you can use while somebody is talking.</li>
+      <li><strong>Trace one more number to its source.</strong> Every organisation has three or four figures everybody quotes and nobody can place. Finding the origin of one is a genuinely useful afternoon.</li>
+      <li><strong>Pick the next course by what is actually blocking you</strong>: whether a difference is real, how to design the comparison, whether the chart is honest, or whether the question finally needs a model.</li>
+    </ol>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions</h2>
+    </div>
+    <p>Clear all three and session 6 gets stamped in your passport.</p>
+
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · You have ninety seconds with a chart in a meeting. Which three questions do you ask first?</p>
+      <button class="qopt" type="button">A · What software made it, what the sample size was, and who signed it off</button>
+      <button class="qopt" type="button">B · Whether the difference is statistically significant, what the confidence interval is, and what test was used</button>
+      <button class="qopt" type="button">C · Compared with what, who is missing from this, and did the mix change - they cost nothing, they need no access to the data, and they find most of what is findable from outside</button>
+      <button class="qopt" type="button">D · Any three; the order does not matter</button>
+      <p class="qwhy">The first three are answerable from the page itself and catch the largest problems: no comparison, a group that silently dropped out, and a composition shift that makes the headline a blend of two moving things. Significance and intervals matter, and they are a later rung and a different course.</p>
+    </div>
+
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · The Berkeley admissions case: the figures and the reversal are real, but the widely told lawsuit story appears to be false. What is the lesson?</p>
+      <button class="qopt" type="button">A · The tidy version of a finding travels and the careful version does not, so when a number arrives with a memorable story attached, the story is the part most likely to be wrong</button>
+      <button class="qopt" type="button">B · The Berkeley figures should not be trusted</button>
+      <button class="qopt" type="button">C · Simpson's paradox is not a real phenomenon</button>
+      <button class="qopt" type="button">D · Textbooks are generally unreliable on statistics</button>
+      <p class="qwhy">The numbers survive scrutiny; the narrative did not. The same flattening happened to the paper's actual conclusion, which was more careful than the retellings, and to the 80 percent claim, where two survey answers became one number. The pattern repeats because tidy stories are easier to carry.</p>
+    </div>
+
+    <div class="quiz-q" data-answer="3">
+      <p class="qtext">3 · You have six good questions about a colleague's analysis. What do you actually do?</p>
+      <button class="qopt" type="button">A · Ask all six in the meeting so nothing is missed</button>
+      <button class="qopt" type="button">B · Ask none and raise it with their manager afterwards</button>
+      <button class="qopt" type="button">C · Send all six in writing so there is a record</button>
+      <button class="qopt" type="button">D · Ask the single one the page cannot answer, with your reason attached, because one question gets answered while six at once gets defended - unless the decision is large and irreversible, in which case all of them get asked properly</button>
+      <p class="qwhy">Attaching the reason is what turns a challenge into help: "did the mix change, I ask because we moved spend to social that month" invites an answer. Volume triggers defence. The exception is genuinely expensive decisions, where the politeness budget goes on tone rather than on skipping questions.</p>
+    </div>
+
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Sources covered</span>
+      <h2>What this session teaches, and where it came from</h2>
+    </div>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The six questions</span><span class="note">Craft; each one is an earlier session turned around, and the sessions carry their own sourcing</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The 80% claim and its citation chain</span><span class="note">Traced by a named practitioner who followed and linked each link; the year-by-year figures come from that write-up and a reposted press release</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The Berkeley lawsuit correction</span><span class="note">A statistics author's investigation citing an interview with one of the paper's own authors, and listing the textbooks and papers that repeat the myth</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">The Berkeley figures themselves</span><span class="note">Secondary tier: the 1975 paper would not load during this build, so the numbers come from three independent sources reproducing its tables and agreeing to the digit</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Significance, intervals and designed comparisons</span><span class="note">Named as the next rung; owned by the statistics and experimentation courses</span></div>
+    </div>
+    <p class="mono" style="margin-top:14px">Every fact on this page, and its verification tier, is recorded in the course's source map.</p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Session 6 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Compared with what?</b><span>A number with nothing beside it is asking you to supply a flattering baseline.</span></div>
+      <div class="cheat-item"><b>Who is missing?</b><span>Charts are made from the rows that survived.</span></div>
+      <div class="cheat-item"><b>Did the mix change?</b><span>Four words. Highest yield question you own.</span></div>
+      <div class="cheat-item"><b>Attach the reason</b><span>Turns a challenge into help. Ask one question, not six.</span></div>
+      <div class="cheat-item"><b>Two hops back</b><span>Does the source have a source? Five minutes finds the dead end.</span></div>
+      <div class="cheat-item"><b>The story is the weak part</b><span>The tidy version travels. Check that one first.</span></div>
+    </div>
+  </section>
+
+  <div class="callout next">
+    <span class="nx-pill">Where next</span>
+    <p>You can take a vague request, work out what would answer it, look at the data honestly, check a number at more than one level, stop at the right rung and read somebody else's work. What blocks you next decides the door: whether a difference is real or noise is <a href="https://phoebefu6.github.io/learn-statistics-with-phoebe/">Statistics ↗</a>, designing the comparison instead of inheriting it is <a href="https://phoebefu6.github.io/learn-experimentation-with-phoebe/">Experimentation ↗</a>, whether the chart tells the truth is <a href="https://phoebefu6.github.io/learn-dataviz-with-phoebe/">Data Visualization ↗</a>, and a question that genuinely needs one is <a href="https://phoebefu6.github.io/learn-intro-ml-with-phoebe/">Intro to ML ↗</a>.</p>
+  </div>
+
+  <footer class="pagefoot">
+    <span>Session 6 of 6 · learn-data-thinking-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="05-when-a-count-is-the-answer.html">← Prev: When a count is the answer</a> &nbsp;·&nbsp; <a href="../index.html">Course home →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

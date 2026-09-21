@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- social:start -->
+<meta name="description" content="Session 2 of 6. Before you open a single file, sketch the table that would answer the question. Then tick what exists, sort what is missing into three kinds of gap, and send one message per gap naming the person who can close it.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Learn with Phoebe">
+<meta property="og:title" content="What you would need to know - learn data thinking with phoebe">
+<meta property="og:description" content="Session 2 of 6. The ideal table comes first. Open the spreadsheet first and the question quietly becomes whatever the spreadsheet can answer.">
+<meta property="og:url" content="https://phoebefu6.github.io/learn-data-thinking-with-phoebe/courses/02-what-you-would-need-to-know.html">
+<meta property="og:image" content="https://phoebefu6.github.io/learn-data-thinking-with-phoebe/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What you would need to know - learn data thinking with phoebe">
+<meta name="twitter:description" content="Session 2 of 6. Sketch the ideal table, tick what exists, and name every gap with the person who can close it.">
+<meta name="twitter:image" content="https://phoebefu6.github.io/learn-data-thinking-with-phoebe/assets/og-cover.png">
+<!-- social:end -->
+<title>Session 2 · What you would need to know - learn data thinking with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-data-thinking-with-phoebe</a> / Session 2 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn Data Thinking with Phoebe · Session 2 of 6</div>
+    <h1>What you would <span class="accent">need to know</span></h1>
+    <p class="sub">You have three questions with all four slots filled, and no idea yet whether a single one of them can be answered, because nobody has said out loud what would answer them. The move almost nobody makes is to write the ideal table first - the columns you would need if you could have anything at all - and only then open the file to see what is actually there. In that order the gaps are visible, nameable and sendable. In the other order the question quietly shrinks to whatever the spreadsheet happens to support, and nobody notices the substitution, including you.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Everyone</span>
+      <span class="chip audience">Bring the three rewritten questions</span>
+      <span class="chip audience">No maths, no code</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-18 · The ideal table, and the gap list</span>
+      <span class="a3" style="flex:5">18-40 · Build-along: three ideal tables</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where we start</h2>
+    </div>
+    <p class="lede">Session 1 ended with three requests rewritten so that each one carries an outcome, a population, a timeframe and a decision. That makes them answerable in principle. Whether any of them is answerable in practice is still completely unknown, because nobody has said what would answer them. <strong>Daybreak</strong>, the coffee subscription company, ran its autumn promotion, and the three askers are still waiting: marketing wants conversion, finance wants revenue per order, and the founder wants to know whether the customers the offer brought in are the sort who stay.</p>
+
+    <div class="legend">
+      <span class="pill">🎫 Clear all three quiz questions to stamp your passport</span>
+      <span class="pill">Live = presented in the 45 minutes</span>
+      <span class="pill">Self-study = the full depth, after class</span>
+    </div>
+
+    <div class="callout win">
+      <p><strong>★ What you walk out with tonight.</strong> An ideal table sketched for each of your three questions, and a gap list naming exactly which columns are missing, what each one would let you answer, and who can change it. The gap list is not a note to yourself. It is a message you can send.</p>
+    </div>
+
+    <div class="callout tip">
+      <p><strong>Where this sits on the shelf.</strong> Writing the SQL that pulls the rows once you know which rows you want is <span class="mono">learn-sql-with-phoebe</span>. Designing a new collection so that the missing column exists next time, properly, with a control group, is <span class="mono">learn-experimentation-with-phoebe</span>. Here the subject is working out what you would need, on paper, before you open anything at all.</p>
+    </div>
+  </section>
+
+  <section class="section" id="part-1">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers the ideal table</span>
+      <h2>Sketch the table you wish you had</h2>
+      <span class="tag concept">6 min live</span>
+    </div>
+    <p class="lede">Take one question with its four slots filled, and draw the table that would answer it if the data gods were generous. Not the table you have. The one you would order from a catalogue. It takes about four minutes per question and it is done with a pen, because the moment a real file is open the sketch stops being ideal and starts being a description of that file.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A sketched table for the marketing question with one row per order and seven named columns, beside a panel saying which of the four slots each column serves">
+        <style>
+          .d2aH { font: 800 11.5px Inter, sans-serif; fill: #2A4030; }
+          .d2aT { font: 700 9.5px Inter, sans-serif; fill: #FFFFFF; }
+          .d2aC { font: 400 9.5px Inter, sans-serif; fill: #1F2A22; }
+          .d2aB { font: 400 11px Inter, sans-serif; fill: #1F2A22; }
+          .d2aW { font: 400 10.5px Inter, sans-serif; fill: #EDF3EE; }
+          .d2aS { font: 700 10.5px Inter, sans-serif; fill: #FFFFFF; }
+          .d2aN { font: 400 11px Inter, sans-serif; fill: #61705F; }
+        </style>
+
+        <text class="d2aH" x="30" y="26">SKETCHED BEFORE ANY FILE IS OPENED</text>
+        <text class="d2aN" x="30" y="44">Did conversion rise among new subscribers after the offer?</text>
+        <text class="d2aH" x="617" y="44">WHICH SLOT EACH COLUMN SERVES</text>
+
+        <rect x="30" y="56" width="567" height="26" rx="6" fill="#2A4030"/>
+        <text class="d2aT" x="36" y="73">order_id</text>
+        <text class="d2aT" x="117" y="73">order_date</text>
+        <text class="d2aT" x="198" y="73">customer_id</text>
+        <text class="d2aT" x="279" y="73">is_new</text>
+        <text class="d2aT" x="360" y="73">channel</text>
+        <text class="d2aT" x="441" y="73">converted</text>
+        <text class="d2aT" x="522" y="73">value</text>
+
+        <rect x="30" y="82" width="567" height="84" fill="#FFFFFF" stroke="#E0E8E1"/>
+        <line x1="111" y1="82" x2="111" y2="166" stroke="#E0E8E1"/>
+        <line x1="192" y1="82" x2="192" y2="166" stroke="#E0E8E1"/>
+        <line x1="273" y1="82" x2="273" y2="166" stroke="#E0E8E1"/>
+        <line x1="354" y1="82" x2="354" y2="166" stroke="#E0E8E1"/>
+        <line x1="435" y1="82" x2="435" y2="166" stroke="#E0E8E1"/>
+        <line x1="516" y1="82" x2="516" y2="166" stroke="#E0E8E1"/>
+        <line x1="30" y1="110" x2="597" y2="110" stroke="#E0E8E1"/>
+        <line x1="30" y1="138" x2="597" y2="138" stroke="#E0E8E1"/>
+
+        <text class="d2aC" x="36" y="100">10241</text>
+        <text class="d2aC" x="117" y="100">09 Oct</text>
+        <text class="d2aC" x="198" y="100">C-8842</text>
+        <text class="d2aC" x="279" y="100">yes</text>
+        <text class="d2aC" x="360" y="100">email</text>
+        <text class="d2aC" x="441" y="100">yes</text>
+        <text class="d2aC" x="522" y="100">24.00</text>
+
+        <text class="d2aC" x="36" y="128">10242</text>
+        <text class="d2aC" x="117" y="128">09 Oct</text>
+        <text class="d2aC" x="198" y="128">C-1077</text>
+        <text class="d2aC" x="279" y="128">no</text>
+        <text class="d2aC" x="360" y="128">social</text>
+        <text class="d2aC" x="441" y="128">no</text>
+        <text class="d2aC" x="522" y="128">0.00</text>
+
+        <text class="d2aC" x="36" y="156">10243</text>
+        <text class="d2aC" x="117" y="156">10 Oct</text>
+        <text class="d2aC" x="198" y="156">C-9310</text>
+        <text class="d2aC" x="279" y="156">yes</text>
+        <text class="d2aC" x="360" y="156">social</text>
+        <text class="d2aC" x="441" y="156">yes</text>
+        <text class="d2aC" x="522" y="156">31.50</text>
+
+        <rect x="30" y="178" width="567" height="42" rx="8" fill="#EDF3EE"/>
+        <text class="d2aH" x="44" y="197">ONE ROW = ONE ORDER</text>
+        <text class="d2aB" x="44" y="213">the founder's question needs one row per customer instead</text>
+
+        <rect x="617" y="56" width="233" height="40" rx="8" fill="#2A4030"/>
+        <text class="d2aS" x="629" y="74">POPULATION -&gt; is_new, channel</text>
+        <text class="d2aW" x="629" y="89">a column you can filter on</text>
+
+        <rect x="617" y="100" width="233" height="40" rx="8" fill="#3F5D45"/>
+        <text class="d2aS" x="629" y="118">OUTCOME -&gt; converted</text>
+        <text class="d2aW" x="629" y="133">the thing being measured</text>
+
+        <rect x="617" y="144" width="233" height="40" rx="8" fill="#5A7D62"/>
+        <text class="d2aS" x="629" y="162">TIMEFRAME -&gt; order_date</text>
+        <text class="d2aW" x="629" y="177">so two windows can be cut</text>
+
+        <rect x="617" y="188" width="233" height="40" rx="8" fill="#B0562C"/>
+        <text class="d2aS" x="629" y="206">DECISION -&gt; channel</text>
+        <text class="d2aW" x="629" y="221">so the answer can be acted on</text>
+
+        <line x1="30" y1="246" x2="850" y2="246" stroke="#E0E8E1"/>
+        <rect x="30" y="262" width="820" height="40" rx="10" fill="#FFFFFF" stroke="#E0E8E1"/>
+        <text class="d2aB" x="46" y="287">Nothing on this sketch has been checked against a real file yet. That is the point of drawing it first.</text>
+
+        <rect x="30" y="312" width="14" height="14" rx="3" fill="#B0562C"/>
+        <text class="d2aN" x="52" y="323">A column you cannot name a purpose for does not belong on the sketch. Cross it off before you ask for it.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - seven columns, four slots, and a grain stated in the first line, all of it written before a file is opened</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>One row per what?<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The single most useful question you can ask about any analysis, yours or somebody else's, is <strong>what does one row represent</strong>. An order. A customer. A customer-week. A session. A support ticket. It takes four words to ask and it is the commonest structural error in the whole field, because it is invisible once the numbers come out.</p>
+        <p>Here is why it matters at Daybreak, concretely. Marketing's question is about orders, so the ideal table has one row per order and the conversion rate is a count of converted orders over all orders. The founder's question is about people, so the ideal table has one row per customer. Those are two different tables, and answering the founder's question on the order table does something specific and silent: a customer who ordered forty times contributes forty rows, a customer who ordered once contributes one, and the answer you get describes the habits of heavy buyers wearing the label "our customers". Nobody sees this happen. The number looks completely ordinary.</p>
+        <p>So write the grain on the first line of the sketch, in words, before any column name. "One row per order, for orders placed between 15 September and 8 December." If you cannot write that sentence, you are not ready to ask anyone for data yet, and five more minutes with the pen is cheaper than the two days that follow.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Columns come from slots<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The ideal table is not invented from nothing. Each of the four slots from session 1 demands a specific kind of column, and if you work through them in order you will have most of the sketch without any creative effort at all.</p>
+        <table class="clean">
+          <tr><th>Slot</th><th>What it demands</th><th>Daybreak example</th></tr>
+          <tr><td><strong>Population</strong></td><td>A column you can filter on, with one value per row, so that the group in the question becomes a row filter rather than a word</td><td><span class="mono">is_new</span>, which turns "new subscribers" into orders where the customer had no earlier order</td></tr>
+          <tr><td><strong>Outcome</strong></td><td>The thing being measured, recorded on every row, in the units the question used</td><td><span class="mono">converted</span> for marketing, <span class="mono">order_value</span> for the finance version of the same request</td></tr>
+          <tr><td><strong>Timeframe</strong></td><td>A date on every row, so the two windows in the question can actually be cut apart</td><td><span class="mono">order_date</span>, covering the twelve weeks either side of the offer, not just the after period</td></tr>
+          <tr><td><strong>Decision</strong></td><td>A grouping column, because a decision is rarely taken for everybody at once and the answer usually has to differ by group</td><td><span class="mono">channel</span>, since the offer can be repeated on email and dropped on social, which is a real spring decision</td></tr>
+        </table>
+        <p>The decision slot is the one people leave off the sketch, and leaving it off is how you end up with a single global number that nobody can act on. If the spring choice is per channel, an answer that does not carry a channel column is not an answer to the question that was asked, however correct it is.</p>
+        <p>Two more columns earn their place on most sketches even though no slot demands them: an identifier, so you can check whether a row is duplicated, and a date of record, so you can tell when a value was written rather than only what it says.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="part-2">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers the gap list</span>
+      <h2>The gap list, and what to do with each kind of gap</h2>
+      <span class="tag concept">5 min live</span>
+    </div>
+    <p class="lede">Now open the file. Go down the sketch, tick every column that exists, and mark every one that does not. What is left is the gap list, and it is worth much more than it looks, because a gap is not a complaint. Each kind of gap has a different cause, a different fix and a different person, and telling them apart takes about a minute per column.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The ideal columns listed down the left with seven ticked as present and three marked missing, beside three kinds of gap with a different instruction for each">
+        <style>
+          .d2bH { font: 800 11.5px Inter, sans-serif; fill: #2A4030; }
+          .d2bB { font: 400 11px Inter, sans-serif; fill: #1F2A22; }
+          .d2bN { font: 400 11px Inter, sans-serif; fill: #61705F; }
+          .d2bY { font: 800 11px Inter, sans-serif; fill: #3F5D45; }
+          .d2bK { font: 800 11px Inter, sans-serif; fill: #2A4030; }
+</style>
+
+        <text class="d2bH" x="30" y="26">IDEAL COLUMNS, CHECKED AGAINST THE REAL TABLE</text>
+        <text class="d2bH" x="30" y="46">WANTED</text>
+        <text class="d2bH" x="352" y="46">THREE KINDS OF GAP, THREE DIFFERENT REPLIES</text>
+
+        <text class="d2bY" x="32" y="62">&#10003;</text>
+        <text class="d2bB" x="52" y="62">order_id</text>
+        <text class="d2bN" x="180" y="62">have it</text>
+
+        <text class="d2bY" x="32" y="80">&#10003;</text>
+        <text class="d2bB" x="52" y="80">order_date</text>
+        <text class="d2bN" x="180" y="80">have it</text>
+
+        <text class="d2bY" x="32" y="98">&#10003;</text>
+        <text class="d2bB" x="52" y="98">customer_id</text>
+        <text class="d2bN" x="180" y="98">have it</text>
+
+        <text class="d2bY" x="32" y="116">&#10003;</text>
+        <text class="d2bB" x="52" y="116">is_new</text>
+        <text class="d2bN" x="180" y="116">have it</text>
+
+        <text class="d2bY" x="32" y="134">&#10003;</text>
+        <text class="d2bB" x="52" y="134">channel</text>
+        <text class="d2bN" x="180" y="134">have it</text>
+
+        <text class="d2bY" x="32" y="152">&#10003;</text>
+        <text class="d2bB" x="52" y="152">converted</text>
+        <text class="d2bN" x="180" y="152">have it</text>
+
+        <text class="d2bY" x="32" y="170">&#10003;</text>
+        <text class="d2bB" x="52" y="170">order_value</text>
+        <text class="d2bN" x="180" y="170">have it</text>
+
+        <rect x="30" y="178" width="10" height="10" rx="2" fill="#B0562C"/>
+        <text class="d2bB" x="52" y="188">renewal_status</text>
+        <text class="d2bN" x="180" y="188">missing</text>
+
+        <rect x="30" y="196" width="10" height="10" rx="2" fill="#3F5D45"/>
+        <text class="d2bB" x="52" y="206">email_opened</text>
+        <text class="d2bN" x="180" y="206">missing</text>
+
+        <rect x="30" y="214" width="10" height="10" rx="2" fill="#5A7D62"/>
+        <text class="d2bB" x="52" y="224">signup_source</text>
+        <text class="d2bN" x="180" y="224">missing</text>
+
+        <rect x="338" y="54" width="8" height="58" rx="2" fill="#B0562C"/>
+        <rect x="352" y="54" width="498" height="58" rx="8" fill="#FFFFFF" stroke="#E0E8E1"/>
+        <text class="d2bK" x="368" y="74">NEVER COLLECTED</text>
+        <text class="d2bN" x="368" y="91">nobody ever wrote it down, so no file anywhere contains it</text>
+        <text class="d2bB" x="368" y="106">Ask the owner of the system to start recording it, and say from which date.</text>
+
+        <rect x="338" y="120" width="8" height="58" rx="2" fill="#3F5D45"/>
+        <rect x="352" y="120" width="498" height="58" rx="8" fill="#FFFFFF" stroke="#E0E8E1"/>
+        <text class="d2bK" x="368" y="140">COLLECTED BUT NOT KEPT</text>
+        <text class="d2bN" x="368" y="157">it existed, then was overwritten, truncated or aged out of a window</text>
+        <text class="d2bB" x="368" y="172">Ask who still has a copy and how far back it goes, before the window shuts.</text>
+
+        <rect x="338" y="186" width="8" height="58" rx="2" fill="#5A7D62"/>
+        <rect x="352" y="186" width="498" height="58" rx="8" fill="#FFFFFF" stroke="#E0E8E1"/>
+        <text class="d2bK" x="368" y="206">EXISTS BUT NOT JOINABLE</text>
+        <text class="d2bN" x="368" y="223">another team holds it under an identifier yours does not share</text>
+        <text class="d2bB" x="368" y="238">Ask what the shared key is, and whether anyone has mapped the two before.</text>
+
+        <line x1="30" y1="256" x2="850" y2="256" stroke="#E0E8E1"/>
+        <text class="d2bB" x="30" y="278">Not one of these three replies says the data is bad. Each of them names a person, a column and a date.</text>
+
+        <rect x="30" y="288" width="14" height="14" rx="3" fill="#B0562C"/>
+        <text class="d2bN" x="52" y="299">A gap you cannot attach a name to is not actionable yet. Find the owner before you write the message.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - three missing columns, three causes, three different people, and not a single sentence about bad data</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Three kinds of gap, three different replies<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>Never collected.</strong> Nothing anywhere holds this value, because no system was ever asked to write it. The reply goes to whoever owns the system that would write it, it asks for collection to begin, and it names the date from which you need it. The cost of this gap is time: the answer arrives one collection period from now, not today, and saying that plainly on day one is what lets somebody plan around it.</p>
+        <p><strong>Collected but not kept.</strong> The value existed and was overwritten, truncated or aged out of a retention window. This is the gap most worth chasing hard and fastest, because a copy is often sitting in an export on somebody's laptop, in a vendor dashboard that keeps ninety days, or in a monthly report nobody deleted. The reply asks who has a copy and how far back it goes, and it is urgent in a way the other two are not, because the window is still closing while you write.</p>
+        <p><strong>Exists but not joinable.</strong> Another team has the column, under an identifier yours does not share. This is a plumbing question, not a data question, and the reply is one line: what is the shared key, and has anybody mapped these two before? The answer is frequently yes, and frequently from someone who tried it last year and can save you a week.</p>
+        <p>What none of these replies says is "the data is bad", which is the sentence that ends conversations. Every gap message has the same three parts: <strong>what is missing, what it would let you answer, and who can change it.</strong> Three parts, one line each, and the third part is the one that turns a complaint into a request.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why ideal-before-actual is the whole point<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The order is not a formality. Open the spreadsheet first and something specific happens within about ninety seconds: you see which columns are there, your sense of what is askable rearranges itself around them, and the question you end up answering becomes the question that file supports. The original question is not rejected. It is quietly replaced, and the replacement feels like the original, because nothing was ever written down to compare it against.</p>
+        <p>Writing the ideal table first is the only way that substitution becomes visible. The sketch is a record of what you wanted made before you knew what you could have, and holding the real table against it is the moment the difference shows up as a list rather than as a feeling. That list is the gap list, and it exists only because the sketch came first.</p>
+        <p>Be straight about the standing of this, because it is craft rather than a research finding. No study shows that teams who sketch the ideal table produce better analyses than teams who do not, and nobody appears to have run one. What can be said is that every process model in the field independently orders the work this way: CRISP-DM, published by a cross-industry consortium in 2000, puts business understanding ahead of data understanding among its six phases, which encodes exactly this rule. Agreement between process models is not evidence of effectiveness, and it should not be presented as if it were.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p>The founder's question needs a column that records what a customer did in the renewal cycle after the promotion. The rows stop at week 24. There is no such column and there is no file that has one, because nothing was ever asked to record it. That is a never-collected gap, and the reply is one sentence: nothing records renewal behaviour after week 24, so this question gets answered in the spring rather than now, and here is who has to switch the recording on today for that to happen.</p>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="part-3">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers proxies</span>
+      <h2>Proxies, and the honest way to use one</h2>
+      <span class="tag concept">4 min live</span>
+    </div>
+    <p class="lede">Some gaps will not close in time, and the pressure then is to measure something nearby instead. That is a proxy, it is completely normal, and every organisation runs on them. What separates an honest proxy from a quiet fabrication is not the choice of substitute. It is whether the substitution is said out loud, in the same breath as the number.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The founder's real outcome on the left with arrows to three candidate proxies, each labelled with what it captures and what it misses, one of them marked as too far from the real thing">
+        <style>
+          .d2cH { font: 800 11.5px Inter, sans-serif; fill: #2A4030; }
+          .d2cT { font: 800 11px Inter, sans-serif; fill: #FFFFFF; }
+          .d2cW { font: 400 11px Inter, sans-serif; fill: #EDF3EE; }
+          .d2cK { font: 700 11.5px Inter, sans-serif; fill: #1F2A22; }
+          .d2cB { font: 400 11px Inter, sans-serif; fill: #1F2A22; }
+          .d2cN { font: 400 11px Inter, sans-serif; fill: #61705F; }
+          .d2cG { font: 800 11px Inter, sans-serif; fill: #2A4030; }
+          .d2cC { font: 800 11px Inter, sans-serif; fill: #7C3A1C; }
+          .d2cR { font: 800 11px Inter, sans-serif; fill: #991B1B; }
+          .d2cE { fill: none; stroke: #B0562C; stroke-width: 1.8; }
+        </style>
+        <defs>
+          <marker id="d2c-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0 0 L10 5 L0 10 z" fill="#B0562C"/>
+          </marker>
+        </defs>
+
+        <text class="d2cH" x="30" y="26">ONE REAL OUTCOME, THREE THINGS PEOPLE MEASURE INSTEAD</text>
+
+        <rect x="30" y="48" width="220" height="100" rx="10" fill="#2A4030"/>
+        <text class="d2cT" x="46" y="72">THE REAL OUTCOME</text>
+        <text class="d2cW" x="46" y="94">Did the customer still</text>
+        <text class="d2cW" x="46" y="110">have an active</text>
+        <text class="d2cW" x="46" y="126">subscription at the</text>
+        <text class="d2cW" x="46" y="142">next renewal?</text>
+
+        <path class="d2cE" d="M256 98 C 285 98 285 77 310 77" marker-end="url(#d2c-arr)"/>
+        <path class="d2cE" d="M256 98 C 285 98 285 151 310 151" marker-end="url(#d2c-arr)"/>
+        <path class="d2cE" d="M256 98 C 285 98 285 225 310 225" marker-end="url(#d2c-arr)"/>
+
+        <rect x="316" y="44" width="8" height="66" rx="2" fill="#3F5D45"/>
+        <rect x="330" y="44" width="520" height="66" rx="8" fill="#FFFFFF" stroke="#E0E8E1"/>
+        <text class="d2cK" x="346" y="66">Ordered again within 12 weeks</text>
+        <text class="d2cG" x="838" y="66" text-anchor="end">USABLE, SAY SO</text>
+        <text class="d2cB" x="346" y="84">Captures: they came back and paid, which is most of what staying means.</text>
+        <text class="d2cN" x="346" y="100">Misses: a lapsed customer who buys one bag once still counts as stayed.</text>
+
+        <rect x="316" y="118" width="8" height="66" rx="2" fill="#991B1B"/>
+        <rect x="330" y="118" width="520" height="66" rx="8" fill="#FEF2F2" stroke="#FCA5A5"/>
+        <text class="d2cK" x="346" y="140">Opened the renewal email</text>
+        <text class="d2cR" x="838" y="140" text-anchor="end">TOO FAR - DO NOT</text>
+        <text class="d2cB" x="346" y="158">Captures: attention, at the moment the email landed in an inbox.</text>
+        <text class="d2cN" x="346" y="174">Misses: payment entirely. A silent, happy, paying customer scores zero.</text>
+
+        <rect x="316" y="192" width="8" height="66" rx="2" fill="#5A7D62"/>
+        <rect x="330" y="192" width="520" height="66" rx="8" fill="#FFFFFF" stroke="#E0E8E1"/>
+        <text class="d2cK" x="346" y="214">Completed onboarding in week one</text>
+        <text class="d2cC" x="838" y="214" text-anchor="end">EARLY ONLY</text>
+        <text class="d2cB" x="346" y="232">Captures: the first week, which does predict the first month fairly well.</text>
+        <text class="d2cN" x="346" y="248">Misses: the renewal cycle, which is the thing the founder asked about.</text>
+
+        <line x1="30" y1="266" x2="850" y2="266" stroke="#E0E8E1"/>
+        <rect x="30" y="274" width="14" height="14" rx="3" fill="#B0562C"/>
+        <text class="d2cN" x="52" y="285">A proxy is fine. Naming it in the same sentence as the answer is the thing that makes it fine.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - three candidates for one missing column, and the one that measures attention instead of money is not a substitute at all</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>A proxy is a different question wearing the name of the first one<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>When you cannot measure whether customers stayed, you measure whether they ordered again within twelve weeks. That is a reasonable thing to do. It is also, strictly, an answer to a different question, and the whole of the honesty here lives in one habit: <strong>you name the substitution in the same sentence as the number, every time, and never in a footnote.</strong></p>
+        <p>Compare the two sentences. "Sixty-one percent of promotion customers stayed" is a claim about retention that nobody measured. "Sixty-one percent of promotion customers ordered again within twelve weeks, which is what we are using in place of whether they stayed" is the same number with the substitution attached, and the second version costs fourteen extra words. Those fourteen words are the entire difference between an honest proxy and a misleading one.</p>
+        <p>The reason it has to be the same sentence is mechanical rather than moral. Numbers travel and their footnotes do not. Your caveat survives one slide, maybe two, and then somebody pastes the figure into an email and the qualification is gone forever. If the substitution is inside the sentence, it travels with the number, and by the time it reaches the board the claim is still the claim you made.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>When a proxy is not acceptable<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>When the decision is expensive and hard to reverse.</strong> A proxy is a loan against the truth, and the interest is paid by whoever acts on it. For a reversible weekly choice, borrow freely. For hiring a team, signing a year of spend, or telling a board that a channel works, the gap between the proxy and the real outcome is being converted into money that cannot come back.</p>
+        <p><strong>When the proxy and the real outcome are known to diverge for the group you care about.</strong> This is the failure that looks most like success. Email opens are a defensible proxy for engagement across a whole customer base, and a terrible one for the subset who pay by standing order and never open anything. If the divergence lands precisely on the population in the question, the proxy is not weaker than the real thing, it points the other way.</p>
+        <p><strong>When the substitution would not survive being said out loud to the person who asked.</strong> This is the most practical test of the three, and you can run it in your head in five seconds. Say the sentence with the substitution in it, to the founder, in your imagination. If it comes out as "we measured whether they opened an email, and we are calling that staying", you already have your answer, and no amount of careful wording fixes it.</p>
+      </div>
+    </details>
+
+    <div class="tryrow" data-fn="wordcount" data-multiline="1" data-title="Write the gap sentence" data-hint="What is missing, what it would let you answer, and who can change it. One line. If you cannot name who can change it, the gap is not yet actionable." data-seed="" data-cta="Count it"></div>
+  </section>
+
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Build-along</span>
+      <h2>Three ideal tables, three gap lists</h2>
+      <span class="tag demo">★ 22 min · your own three questions</span>
+    </div>
+    <p class="lede">Your three rewritten questions from session 1, one sketch each. Pen first, file later, and the order is the part that does the work.</p>
+
+    <div class="tick" data-stages="One row per what|Write the columns|Tick what exists|Sort the gaps|Write the messages" data-title="Five passes, about four minutes each" data-foot="The output is three sketches, one gap list and a small set of messages addressed to named people. If a gap has no name attached to it, it is not finished, and it will still be open in six weeks.">
+      <p class="tick-note" data-stage="0"><b>Decide what one row represents</b> for each of the three questions, and write it as a sentence before any column name. An order, a customer, a customer-week, a ticket. Where two of your questions need different grains, note that, because it means two tables and not one.</p>
+      <p class="tick-note" data-stage="1"><b>Write the ideal columns from the four slots.</b> Population needs something to filter on, outcome needs the thing being measured, timeframe needs a date on every row, decision needs a grouping column. Add an identifier so duplicates are detectable. Do not open anything yet.</p>
+      <p class="tick-note" data-stage="2"><b>Now open the real data and tick what exists.</b> Go down the sketch in order and mark each column present or absent. Resist rewriting the sketch as you go; the columns you wanted and did not get are the entire product of this exercise.</p>
+      <p class="tick-note" data-stage="3"><b>Sort every missing column</b> into never collected, collected but not kept, or exists but not joinable. If you cannot tell which, that is itself a question for somebody, and it is usually answered in one reply.</p>
+      <p class="tick-note" data-stage="4"><b>Write one message per gap</b>, three parts each: what is missing, what it would let you answer, who can change it. Put the name in before you send. A gap addressed to nobody stays open indefinitely and then gets described as a data problem.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step"><p><strong>Sketch on paper, not in a spreadsheet.</strong> Opening a spreadsheet to draw the ideal table means opening a spreadsheet, and within a minute you are looking at column names that exist instead of column names you want.</p></div>
+      <div class="step"><p><strong>Write the grain as a full sentence</strong>, with the date range in it. "One row per customer who placed a first order between 15 September and 8 December" is a grain. "Customers" is a word.</p></div>
+      <div class="step"><p><strong>Include the columns you expect to be missing.</strong> The sketch is a wish list, and a wish list that pre-censors itself produces a gap list with nothing on it, which is the one outcome guaranteed to be wrong.</p></div>
+      <div class="step"><p><strong>Chase the not-kept gaps first.</strong> Those are the ones where a copy still exists somewhere and the window is closing. The never-collected ones cannot get worse; the not-kept ones can.</p></div>
+      <div class="step"><p><strong>Name a person, not a team.</strong> "Engineering" does not read messages. One human being does, and finding out which one takes a single question to whoever sits nearest the system.</p></div>
+      <div class="step"><p><strong>Keep all three sketches.</strong> Session 3 opens the data behind the closest one and spends twenty minutes on it before calculating anything at all.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <p><strong>If you take one thing from tonight.</strong> Do not open the data until stage three. Everything before it is worth doing precisely because it was done in ignorance of what the file contains, and the ignorance is not a defect in the method, it is the method. Once you have seen the columns you cannot unsee them, and the sketch you draw afterwards will be a description of the file with a wish list's name on it.</p>
+    </div>
+  </section>
+
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Before session 3</h2>
+      <span class="tag exercise">25 min</span>
+    </div>
+    <ol>
+      <li><strong>Send the gap messages</strong> and note which ones get an answer and how fast. The pattern is informative: not-kept gaps usually come back within a day because somebody knows exactly where the copy is, and never-collected gaps take longer because the reply requires a decision rather than a lookup.</li>
+      <li><strong>Find one analysis in your organisation that used a proxy without saying so.</strong> A retention figure built on repeat orders, an engagement number built on logins, a satisfaction score built on survey responders only. You will not have to look hard, and the point is not to catch anyone out, it is to see how completely invisible the substitution is once the number is in a slide.</li>
+      <li><strong>Pick the question whose ideal table is closest to what exists.</strong> That is the one session 3 opens and looks at properly, and closest means fewest missing columns, not most interesting subject.</li>
+      <li><strong>Bring the actual file or table</strong> for that question, whatever state it is in. Not a summary of it, not a screenshot of the tidy tab, the real thing with the real number of rows.</li>
+    </ol>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions</h2>
+    </div>
+    <p>Clear all three and session 2 gets stamped in your passport.</p>
+
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · Why is "what does one row represent" worth asking before anything else?</p>
+      <button class="qopt" type="button">A · It tells you how large the file will be, which decides what tool you need</button>
+      <button class="qopt" type="button">B · It is a convention in most data teams, so it keeps your work readable by colleagues</button>
+      <button class="qopt" type="button">C · A question about customers answered on a table of orders silently weights the answer toward people who order a lot, and nothing in the output reveals that it happened</button>
+      <button class="qopt" type="button">D · It determines which chart type is appropriate for the result</button>
+      <p class="qwhy">A customer with forty orders contributes forty rows and one with a single order contributes one, so the answer describes heavy buyers while carrying the label "our customers". The number looks entirely ordinary when it comes out, which is exactly why the grain has to be settled in words at the top of the sketch. It is the commonest structural error in the field and the cheapest one to avoid.</p>
+    </div>
+
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · You have three missing columns. What does sorting them into kinds actually buy you?</p>
+      <button class="qopt" type="button">A · Each kind has a different cause, a different fix and a different person: never collected means asking an owner to start recording it from a named date, collected but not kept means asking who still has a copy before the window shuts, and exists but not joinable means asking what the shared key is</button>
+      <button class="qopt" type="button">B · It lets you rank the gaps by how much of the analysis they block</button>
+      <button class="qopt" type="button">C · It is the standard way to document data quality issues for an audit trail</button>
+      <button class="qopt" type="button">D · It tells you which gaps can be filled by a proxy and which cannot</button>
+      <p class="qwhy">Three kinds, three replies, three different people, and none of them is the sentence "the data is bad", which ends conversations rather than starting them. The not-kept gaps are the urgent ones because a copy often still exists and the retention window is closing while you write. Every message has the same three parts: what is missing, what it would let you answer, and who can change it.</p>
+    </div>
+
+    <div class="quiz-q" data-answer="3">
+      <p class="qtext">3 · You cannot measure whether customers stayed, so you use "ordered again within 12 weeks" instead. What is the rule?</p>
+      <button class="qopt" type="button">A · Avoid the proxy and report that the question cannot be answered</button>
+      <button class="qopt" type="button">B · Use it, and record the substitution in the appendix so the detail is available to anyone who wants it</button>
+      <button class="qopt" type="button">C · Use it, and add a footnote on the slide where the number appears</button>
+      <button class="qopt" type="button">D · Use it, and name the substitution in the same sentence as the answer, every time it is stated</button>
+      <p class="qwhy">Numbers travel and their footnotes do not; a caveat survives one slide and then somebody pastes the figure into an email without it. Putting the substitution inside the sentence costs about fourteen words and means the qualification arrives wherever the number arrives. Proxies are legitimate and unavoidable, so the honesty has to live in how the answer is phrased rather than in whether a proxy is used.</p>
+    </div>
+
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Sources covered</span>
+      <h2>What this session teaches, and where it came from</h2>
+    </div>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The four slots mapped to columns</span><span class="note">Practitioner craft, built directly on session 1's four slots; each slot demands a specific kind of column and the mapping is stated as method, not as finding</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">The ideal-before-actual discipline</span><span class="note">Practitioner craft. No study shows teams that sketch the ideal table first produce better analyses; the source map records that nobody appears to have run one, and the page says so</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">CRISP-DM puts business understanding before data understanding</span><span class="note">Read from the primary consortium document, published 2000; six phases, in that order</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Proxy discipline, and the same-sentence rule</span><span class="note">Craft with no citation behind it, offered as a working norm rather than as evidence; the reason given is that footnotes do not travel with numbers</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The founder's gap at Daybreak</span><span class="note">A property of the dataset rather than a claim about the world, and verifiable directly in session 4's bench</span></div>
+    </div>
+    <p class="mono" style="margin-top:14px">Every fact on this page, and its verification tier, is recorded in the course's source map.</p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Session 2 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>One row per what</b><span>Write the grain as a sentence before any column name.</span></div>
+      <div class="cheat-item"><b>Columns come from slots</b><span>Filter, measure, date, group. Four slots, four columns.</span></div>
+      <div class="cheat-item"><b>Ideal first, file second</b><span>Open it first and the question becomes what the file supports.</span></div>
+      <div class="cheat-item"><b>Three kinds of gap</b><span>Never collected, not kept, not joinable. Different person each time.</span></div>
+      <div class="cheat-item"><b>Every gap has a name</b><span>Missing what, answers what, who can change it.</span></div>
+      <div class="cheat-item"><b>Proxies go in the sentence</b><span>Not the footnote. Footnotes do not travel with the number.</span></div>
+    </div>
+  </section>
+
+  <div class="callout next">
+    <span class="nx-pill">Next session</span>
+    <p>You now know what you would need and what you actually have, which is more than most analyses ever establish. Session 3 opens the file behind your closest question and spends twenty minutes looking at it before calculating anything: how many rows, what is missing, what is duplicated, what is impossible. The problems that break every later step are visible in those first twenty minutes and essentially nowhere else, because once a number has been computed it looks like a number rather than like a symptom.</p>
+  </div>
+
+  <footer class="pagefoot">
+    <span>Session 2 of 6 · learn-data-thinking-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="01-the-question-behind-the-question.html">← Prev: The question behind the question</a> &nbsp;·&nbsp; <a href="03-look-before-you-model.html">Next: Look before you model →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>
