@@ -21,6 +21,8 @@
   --paper: #FBFCFA;
   --code-bg: #16211A;
   --code-ink: #E0E8E1;
+  --scrim-rgb: 31,42,34;
+  --shadow-rgb: 63,93,69;
   --radius: 14px;
 }
 
@@ -193,7 +195,7 @@ details.card {
   overflow: hidden;
   background: #fff;
 }
-details.card[open] { border-color: var(--indigo-soft); box-shadow: 0 8px 28px rgba(63,93,69,.08); }
+details.card[open] { border-color: var(--indigo-soft); box-shadow: 0 8px 28px rgba(var(--shadow-rgb),.08); }
 details.card summary {
   list-style: none;
   cursor: pointer;
@@ -385,7 +387,7 @@ figure.zoomable {
   transition: box-shadow .15s ease;
   background: #fff;
 }
-figure.zoomable:hover { box-shadow: 0 8px 28px rgba(63,93,69,.12); }
+figure.zoomable:hover { box-shadow: 0 8px 28px rgba(var(--shadow-rgb),.12); }
 figure.zoomable svg, figure.zoomable img { width: 100%; height: auto; display: block; }
 figure.zoomable figcaption {
   margin-top: .6rem;
@@ -401,7 +403,7 @@ figure.zoomable figcaption {
   position: fixed;
   inset: 0;
   z-index: 100;
-  background: rgba(31,42,34,.9);
+  background: rgba(var(--scrim-rgb),.9);
   display: none;
   align-items: center;
   justify-content: center;
@@ -645,7 +647,7 @@ details.card::after {
   pointer-events: none;
   opacity: 0;
   transition: opacity .3s ease;
-  background: radial-gradient(320px circle at var(--mx, 50%) var(--my, 50%), rgba(63,93,69,.09), transparent 65%);
+  background: radial-gradient(320px circle at var(--mx, 50%) var(--my, 50%), rgba(var(--shadow-rgb),.09), transparent 65%);
 }
 details.card:hover::after { opacity: 1; }
 
@@ -681,7 +683,7 @@ details.card:hover::after { opacity: 1; }
   background: #fff;
   overflow: hidden;
   margin: 1rem 0 1.4rem;
-  box-shadow: 0 8px 28px rgba(63,93,69,.06);
+  box-shadow: 0 8px 28px rgba(var(--shadow-rgb),.06);
 }
 .sql-bar {
   display: flex; align-items: center; gap: .5rem;
